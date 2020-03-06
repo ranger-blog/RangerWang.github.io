@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>Common Command | Ranger</title><meta name="description" content="Common Command"><meta name="keywords" content="command"><meta name="author" content="Ranger Wang"><meta name="copyright" content="Ranger Wang"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Common Command"><meta name="twitter:description" content="Common Command"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Common Command"><meta property="og:url" content="http://ranger.run/sop/common_command/"><meta property="og:site_name" content="Ranger"><meta property="og:description" content="Common Command"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://ranger.run/sop/common_command/"><link rel="prev" title="2019最佳辩手——任正非" href="http://ranger.run/book/share/renzhengfei_2019/"><link rel="next" title="C++ Helper" href="http://ranger.run/tech/C++/"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Ranger</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/photo/"><i class="fa-fw fa fa-picture-o"></i><span> Photo</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> Search</span></a></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">29</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">13</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/photo/"><i class="fa-fw fa fa-picture-o"></i><span> Photo</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div><div class="sidebar-toc__content toc-div-class" style="display:none"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Linux"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">Linux</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Git"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">Git</span></a></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content toc-div-class" style="display:none"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-number">1.</span> <span class="toc-text">Linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-number">2.</span> <span class="toc-text">Git</span></a></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">Common Command</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Created 2020-01-14<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> Updated 2020-02-26</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/sop/">sop</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>Post View:</span><span id="busuanzi_value_page_pv"></span><span class="post-meta__separator">|</span><i class="fa fa-comments-o post-meta__icon fa-fw" aria-hidden="true"></i><span>comments:</span><a href="/sop/common_command/#post-comment"><span class="gitalk-comment-count comment-count"></span></a></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">抱歉, 此乃南墙, 请回头...</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="15d7058921f8c6eaa0562ef31ca8d1ecf0ce64420eb6f7c36a0592ac2ab4146b">33d9f1cdedb098690ea1a526cd62408db24d1478b18c56a6f55db524d0b51737222c2d35b8549f1f1feba1c6bc6104062d7eef762d27b7c4d0550c660f2bb826db52d22961a31fbc849d7e3520221d7a1ed3c23c8307fc468e1d160f9caa10e87781833430301a9e8298959f6fbf9918ca7ceec5cabcaf82e21660bac169710057a7136d1d878873be073c34123bf5ae6e8c7aab4d6b46e100cb2e8f7f248c74fd7bd62e38bd84a856143325c0374854e3834cd4e8b04e2701bcd88f9bbde0ff43675bfffd3effaa0f6be5a0e53b095b88c4ad7ef122aad7d2f8e5f749ff4e426a70e69127fc7ae38d9832719ad209f1aff0c5c9fffc1ff6e172600aa9ce2f7a505071a0ec0ee1925bb4e97738508a56a829430cb5b7df95603ae4a15585af25582c1dd842a75a09ae0b6961320958a381080fcad8e5db2be9049ef1927c38a240ca74379a4890dd1ddfe75885a6dfed0defd0c04355f8f435b6e8bbeda433caabac13bb570d0d8ff5e6adafbf7fc8db57ad527e0e6591a7a9af1a8b41a6b5b276d44917c8b6fe6c5e6b8ee7db3f56abafb64144eead417fe4d7be4e26e6bcf2810ba52226fd081f72229476a19cc5683c051d0295a79793a34780661e500de5cc159eec4e2f236e33306c118efcb4f2d3c714e51e86b21cebf60db4b51e8d7979dd64401f521fdf845fce22ed83879b9feba506eb5da880f762d9aaa9f8c872b4f9a0d8dfb07c545549dd40a3d8352a8da8c8b1449eb56274668c272733329cc013214d9c8b7feaa2bac868a0a8a8f2da7f819788b7bd600be154b7cd539d22866dd82d4c9d8ff5d34873e4abbe1be5cbbc7b8c3a4c92ffbda9dcfd4e540d38c2d71a7048e70c1b8063efff93063ca877e5a179ed303d8325040f36dfff7df23731f9abf9f74dd1030294437b5074ddcf5ebc2935a8e0f6db2c8d08e16b5bbaf4c245f0a40c09c97aef0519d4d51adc28d3b12282d6a8e2d1605c3b8775905c69593e5bd843246ea8a5babc07f1140f250dfc6fc5d423eaf6d1683e1a69ee6b0eaa69110e2aca5510a68ab117f89520c5e5fd639e9626739baff80762c6cbd9096ec1e12aa0f177db5e32b34a6fdb47de4c5ec29450f698e36a85a8d4a2b2525b99c2526bedfae63b87c7f674242875c60d543269e776eebe6ca34b2f0b276b54957aa78ede17445e20d2131263bf6d206f05ae269f724679e46cb6aa81ec486dfb27d9fe715d87cae83eca1a62fc3d901f8c52f1ed90dc53c051d83753634f091e9048b170d2ba69ea303b34e77dde22a34bd387025d20b6533d0608c9c7fb9b8243a9edb495cdf9f2275c45f4dddc953387b92c19d3558c1efb8750e1b861e1f7c8be687692bd4f4d6bc8879103bc4a96b0eeb601bea3555df180db9d7507d10cfa379b162e38890a6298443254f721ca12121a4969f82d955f8d05376e8ca64d13891085566c3a9aaac47965b53a2a8e3e654d5c1b1eae2ab98e14977d9ddc5c75fb9472eb66ce8fbd373b52a7ed3ac08fbafb1221cc7e1cb2b777ecaa0675986df783eaa6ef6ae5df931138823edfd8b07b829dce010cfb4cdee6f66bce61953cf2e39c347d265d71e73337ef40e27c7ea067c4840a77d52a810be32c6cb563fcb7e6f785eef9dfb11581d8dc2851e2faed71199819e5c87ab69df6e6120172dd31ade1f6f04fec58a8d674b65f2c197ff4eb3de1426ad2a833649ec613d2653fbac595bfc69624757269e575375e93c809dbee8e9fc52c5a11218cdcd0fc5944bb1293d60b95046a30402fe5761bad865f9a65c52348fd71e15cf01853e0cfd055c9f4567312c518066205b615d1a2555ec1ecb942077e950791451ba658eb2a0aaf4ba08eaf3c41829eb8f7b6345f6b6f142696d9c299640df24438e13e4b05e2c7745082f9a11b7859ba3c1a202e428ad60ec55c781f4283632ebcff16c38efdc71705f46fc8fe9298e7798db77b91b6fe9d1993033b98e9229dc28bd1a2fa06023b0ba9c552dbd0b1d764bda90836fa0513b55d00eb02a1b04441d95b10053508d993e5cd6a853eefb4c84fa7468e42cbca902f273b96eed59cf7d9df792254743a7c0337f7ccdf29dde015bdde4a26ba3fc7850cc799212d421d52e46d1203637d1ebb8eefd45275b2199830a91fbb660ae95e21fa6023c1543087390042a1adb86fca97a9227287f921347e3f3ea8ce98035d743c1f1b16d7ddf4e86b27c8281f8b1d1640f5566ac19caebe0585cf2849db281167ca70df1ca889ddc4ed7af14713d43b37506d93f4c0c5cc342eb82da90daa3f91fd6c3e6a96350e48cbb1d05ebad9c2aa64dc751d6edfff6ac691e9bc3179000d298db1adffa33542fb6d90692eb66aa9494c7ed89f81a9e9944c9b36c274f682024b642deca765c9046a3bfe395831ea30b7de6e738c886089ace583c8c64e24696809d143a260029ff40f55283f2df955dac5ed10ae32477ab567c518c7516db376b2a3cb64037f65c939d160cb05ff9ea6f69c03d3f62eae9cb949c2793706406f69553236f8cb5e00a908ad399ccfd99f0c8438012011339d62fc42a5fd9ec1ff556f2c8b1fc5713e51765c721d9e02c7d85efdbc679f6f5f4e2431ea846cfb17ff1ae859796f66d43eac66eb26592f3cb566e092de6e4d953d46143041d28c2583d70249e3f192d32d299e8c4f84c53ec6abfc079c6165f7867056e305f4a60bd53e3f33f0d1154b1e6b69a1f54b980efebd25b084e9405b9f9eca6f64e3eae46c40b18725c513ec70514ab4c2638bd54b633f4cfd9375cd86462e16fb2045ead09e37d12cd7931e736785183ce9c85f85d95141</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css"></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Ranger Wang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://ranger.run/sop/common_command/">http://ranger.run/sop/common_command/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/command/">command    </a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="Wechat"><div class="post-qr-code__desc">Wechat</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="Alipay"><div class="post-qr-code__desc">Alipay</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/book/share/renzhengfei_2019/"><img class="prev_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>2019最佳辩手——任正非</span></div></a></div><div class="next-post pull_right"><a href="/tech/C++/"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>C++ Helper</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> Comment</span></div><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: 'fadebe7452c4704c410b',
+  clientSecret: '92e319bdbca5f5a24d1ecd5726470b441997860b',
+  repo: 'blogComment',
+  owner: 'RangerWang',
+  admin: 'RangerWang',
+  id: md5(decodeURI(location.pathname)),
+  language: 'en',
+  updateCountCallback: commentCount
+})
+gitalk.render('gitalk-container')
+
+function commentCount(n){
+  document.getElementsByClassName('gitalk-comment-count')[0].innerHTML= n
+}</script></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Ranger Wang</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi, welcome to my <a href="http://ranger.run">blog</a>!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="Scroll to comment"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script id="ribbon_piao" mobile="false" src="https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/js/piao.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script type="text/javascript" id="maid-script" mermaidoptioins="{&quot;startOnload&quot;:true}" src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js?v=undefined"></script><script>if (window.mermaid) {
+  var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
+  mermaid.initialize(options);
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

@@ -1,0 +1,1415 @@
+<hr>
+<p>title: PAT<br>date: 2020-01-06 07:26:48<br>tags: </p>
+<ul>
+<li>2020<br>top_img: <a href="https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg</a><br>cover: <a href="https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/RangerWang/butterfly_cdn@v0.5/top_img/wallpaper11.jpg</a><br>toc: true<br>toc_number: true<br>mathjax: true<br>categories:</li>
+<li>history</li>
+<li>2020</li>
+<li>408<br>comments: true<br>password: 1<br>message: ‘抱歉, 此乃南墙, 请回头…’</li>
+</ul>
+<hr>
+<h1 id="Morning-Reading"><a href="#Morning-Reading" class="headerlink" title="Morning Reading"></a>Morning Reading</h1><ul>
+<li>数据结构（45）</li>
+<li>计算机组成原理（45）</li>
+<li>计算机网络（25）</li>
+<li>计算机操作系统（35）</li>
+</ul>
+<h1 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h1><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><h3 id="考查目标"><a href="#考查目标" class="headerlink" title="[考查目标]"></a>[考查目标]</h3><p>1。掌握数据结构的基本概念、基本原理和基本方法。<br>2。掌握数据的逻辑结构、存储结构及基本操作的实现，能够对算法进行基本的时间复<br>杂度与空间复杂度的分析。<br>3。能够运用数据结构基本原理和方法进行问题的分析与求解，具备采用 C 或 C++语言<br>设计与实现算法的能力。</p>
+<h3 id="一、线性表"><a href="#一、线性表" class="headerlink" title="一、线性表"></a>一、线性表</h3><p>（一）线性表的定义和基本操作<br>（二）线性表的实现<br>1。顺序存储<br>2。链式存储<br>3。线性表的应用</p>
+<h3 id="二、栈、队列和数组"><a href="#二、栈、队列和数组" class="headerlink" title="二、栈、队列和数组"></a>二、栈、队列和数组</h3><p>（一）栈和队列的基本概念<br>（二）栈和队列的顺序存储结构<br>（三）栈和队列的链式存储结构<br>（四）栈和队列的应用<br>（五）特殊矩阵的压缩存储</p>
+<h3 id="三、树与二叉树"><a href="#三、树与二叉树" class="headerlink" title="三、树与二叉树"></a>三、树与二叉树</h3><p>（一）树的基本概念<br>（二）二叉树<br>1。二叉树的定义及其主要特征<br>2。二叉树的顺序存储结构和链式存储结构<br>3。二叉树的遍历<br>4。线索二叉树的基本概念和构造<br>（三）树、森林<br>1。树的存储结构<br>2。森林与二叉树的转换<br>3。树和森林的遍历<br>（四）树与二叉树的应用<br>1。二叉排序树<br>2。平衡二叉树<br>3。哈夫曼（Huffman）树和哈夫曼编码</p>
+<h3 id="四、图"><a href="#四、图" class="headerlink" title="四、图"></a>四、图</h3><p>（一）图的基本概念<br>（二）图的存储及基本操作<br>1。邻接矩阵法<br>2。邻接表法<br>3。邻接多重表、十字链表<br>（三）图的遍历<br>1。深度优先搜索<br>2。广度优先搜索<br>（四）图的基本应用<br>1。最小（代价）生成树<br>2。最短路径<br>3。拓扑排序<br>4。关键路径</p>
+<h3 id="五、查找"><a href="#五、查找" class="headerlink" title="五、查找"></a>五、查找</h3><p>（一）查找的基本概念<br>（二）顺序查找法<br>（三）分块查找法<br>（四）折半查找法<br>（五）B 树及其基本操作、B+树的基本概念<br>（六）散列（Hash）表<br>（七）字符串模式匹配<br>（八）查找算法的分析及应用</p>
+<h3 id="六、排序"><a href="#六、排序" class="headerlink" title="六、排序"></a>六、排序</h3><p>（一）排序的基本概念<br>（二）插入排序<br>1。直接插入排序<br>2。折半插入排序<br>（三）气泡排序（bubble sort）<br>（四）简单选择排序<br>（五）希尔排序（shell sort）<br>（六）快速排序<br>（七）堆排序<br>（八）二路归并排序（merge sort）<br>（九）基数排序<br>（十）外部排序<br>（十一）各种内部排序算法的比较<br>（十二）排序算法的应用</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><pre><code class="lang-mermaid">graph LR
+    A(绪论) --- B(数据结构)
+
+    B --- B1(逻辑结构)
+    B --- B2(&quot;存储结构(物理结构)&quot;)
+    B --- B3(数据的运算)
+    B1 --- B11(&quot;线性结构: 线性表, 栈, 队列&quot;)
+    B1 --- B12(&quot;非线性结构: 树, 图, 集合&quot;)
+
+    A --- C(五个特征)
+    C --- C1(算法定义)
+    C --- C2(&quot;五个特性: 有穷, 确定, 可行, 输出, 输出&quot;)
+    C --- C3(效率的度量)
+    C3 --- C11(时间复杂度)
+    C3 --- C12(空间复杂度)
+</code></pre>
+<h3 id="基本概念和术语"><a href="#基本概念和术语" class="headerlink" title="基本概念和术语"></a>基本概念和术语</h3><blockquote>
+<p>数据, 数据元素, 数据对象, 数据类型, 抽象数据类型, 数据结构</p>
+<blockquote>
+<p>抽象数据类型(ADT): 指一个数据模型及定义在该模型上的一组操作; 其定义仅取决于它的一组逻辑特性; 常用(数据对象, 数据关系, 基本操作集)表示</p>
+<p>数据结构是相互之间存在一种或多种特定关系的数据元素的集合。包含三方面内容(逻辑结构, 存储结构和数据运算)</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>数据的逻辑结构</p>
+<pre><code class="lang-mermaid">  graph LR    
+      A(数据的逻辑结构) --- B(线性结构)
+      B --- B1(一般线性表)
+      B --- B2(受限线性表)
+      B2 --- B21(栈和队列)
+      B2 --- B22(串)
+      B --- B3(线性表推广)
+      B3 --- B31(数组)
+      B3 --- B32(广义表)
+      A --- C(非线性结构)
+      C --- C1(集合)
+      C --- C2(树形结构)
+      C2 --- C21(一般树)
+      C2 --- C22(二叉树)
+      C --- C3(图状结构)
+      C3 --- C31(有向图)
+      C3 --- C32(无向图)
+</code></pre>
+</li>
+<li><p>存储结构</p>
+<ul>
+<li>顺序存储</li>
+<li>链式存储</li>
+<li>索引存储</li>
+<li>散列存储(Hash存储)</li>
+</ul>
+</li>
+</ul>
+<h3 id="算法和算法评价"><a href="#算法和算法评价" class="headerlink" title="算法和算法评价"></a>算法和算法评价</h3><ul>
+<li><p>时间复杂度</p>
+<blockquote>
+<p>算法中所有语句的频度之和记为 T(n), 时间复杂度主要分析 T(n)的数量级。<br>常用算法中基本运算的频度 f(n)来分析算法的时间复杂度. 记为 T(n) = O(f(n))<br>常见的渐近时间复杂度为:</p>
+<blockquote>
+<p>O(1) &lt; O($log<em>{2}n$) &lt; O(n) &lt; O($nlog</em>{2}n$) &lt; O($n^2$) &lt; O($n^3$) &lt; O($2^n$) &lt; O($n!$) &lt; O($n^n$)</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>空间复杂度</p>
+</li>
+</ul>
+<h2 id="Linear-List"><a href="#Linear-List" class="headerlink" title="Linear List"></a>Linear List</h2><pre><code class="lang-mermaid">graph LR
+    A(线性表) --- B(顺序存储)
+    B --- B1(顺序表)
+    A(线性表) --- C(链式存储)
+    C --- C1(单链表)
+    C1 --- C5(指针实现)
+    C --- C2(双链表)
+    C2 --- C5
+    C --- C3(循环链表)
+    C3 --- C5(指针实现)
+    C --- C4(&quot;静态链表(借助数组实现)&quot;)
+</code></pre>
+<h3 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h3><ul>
+<li><p>定义</p>
+<pre><code class="lang-c">#define InitSize 100
+typedef struct {
+    ElemType *data;
+    int MaxSize, length;
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>线性表中的位序从1开始，数组中的元素的下标是从0开始的</li>
+<li>主要特点: 随机访问，即通过首地址和元素序号可在时间O(1)内找到指定元素。</li>
+<li>存储密度高，每个节点只存储输出元素</li>
+<li>O(n)  插入，删除，顺序查找</li>
+</ul>
+<h3 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h3><p>链表，无论单链表，双链表还是循环链表，一定要保证不断链。</p>
+<h4 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h4><ul>
+<li><p>定义</p>
+<pre><code class="lang-c">  typedef struct LNode{
+  ElemType data;
+      struct LNode *next;
+        }LNode, *LinkList
+</code></pre>
+<p>```</p>
+</li>
+<li><p>不管带不带头结点，头指针始终指向链表的第一个结点</p>
+</li>
+<li><p>头结点是带头结点的链表中的第一个结点，结点内通常不存储信息。(加入头结点，空表和非空表的处理得到统一)</p>
+</li>
+<li><p>O(n)</p>
+<ul>
+<li>头插法建立单链表</li>
+<li>尾插发建立单链表</li>
+<li>按序号查找结点值</li>
+<li>按值查找表结点</li>
+<li>插入结点操作</li>
+<li>删除结点操作</li>
+<li>求表长操作</li>
+</ul>
+</li>
+</ul>
+<h4 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h4><ul>
+<li>定义<pre><code class="lang-c">typedef struct DNode{
+    ElemType data;
+    struct DNode *prior,*next;
+} DNode, *DLinklist;
+</code></pre>
+</li>
+</ul>
+<h4 id="循环单链表"><a href="#循环单链表" class="headerlink" title="循环单链表"></a>循环单链表</h4><ul>
+<li>循环单链表</li>
+<li>循环双链表</li>
+</ul>
+<h4 id="静态链表"><a href="#静态链表" class="headerlink" title="静态链表"></a>静态链表</h4><p>借助数组来描述线性表的链式存储结构，这里的指针是结点的相对地址(数组下标)，又称游标。</p>
+<h3 id="如何选取存储结构"><a href="#如何选取存储结构" class="headerlink" title="如何选取存储结构"></a>如何选取存储结构</h3><ul>
+<li><p>基于存储考虑</p>
+<p>难以估计线性表的长度或存储规模时，不宜采用顺序表；链表不用事先估计存储规模，但链表的存储密度较低，显然链式存储结构的存储密度是小于1的。</p>
+</li>
+<li><p>基于运算考虑</p>
+<ul>
+<li>若经常做的运算时按序号访问数据元素，则显然顺序表优于链表。</li>
+<li>在顺序表中进行插入、删除操作时，平均移动表中一半的元素，当数据元素的信息量较大且表较长时，这一点是不应忽视的。</li>
+<li>在链表中进行插入、删除操作时，虽然也要找插入位置，但操作主要是比较操作，从这个角度考虑显然后者优于前者。</li>
+</ul>
+</li>
+<li><p>基于环境的考虑</p>
+<ul>
+<li>顺序表容易实现，任何高级语言中都有数组类型；链表的操作时基于指针的，相对来讲，前者实现较为简单</li>
+<li>通常较稳定的线性表选择顺序存储，而频繁进行插入、删除操作的线性表宜选择链式存储。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Stack-and-Queue"><a href="#Stack-and-Queue" class="headerlink" title="Stack and Queue"></a>Stack and Queue</h2><h3 id="复习提示"><a href="#复习提示" class="headerlink" title="复习提示"></a>复习提示</h3><ul>
+<li>本章通常以选择题的形式考查，题目不算难，但命题形式灵活，也容易出现在算法设计题中。</li>
+<li>其中栈(出入栈的过程、出栈序列的合法性) 和 队列的操作及其特征是重点。</li>
+<li>此外，栈和队列的顺序存储结构、链式存储结构及其特点、双端队列的特点、栈和队列的常见应用，以及数组和特殊矩阵的压缩存储都是读者必须掌握的内容。</li>
+</ul>
+<pre><code class="lang-mermaid">graph LR
+    A(线性表)-- 操作受限 ---B1(栈)
+    B1 --- B11(顺序栈)
+    B1 --- B12(链栈)
+    B1 --- B13(共享栈)
+    A(线性表)-- 操作受限 ---B2(队列)
+    B2 --- B21(循环队列)
+    B2 --- B22(链式队列)
+    B2 --- B23(双端队列)
+    A-- 推广 ---C(数组)
+    C --- C1(一维数组)
+    C --- C2(&quot;多维数组: 压缩存储, 稀疏矩阵&quot;)
+</code></pre>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p>栈(Stack) 只允许在一端进行插入或删除操作的线性表。</p>
+<ul>
+<li><p>顺序栈</p>
+<pre><code class="lang-CQL">#define MaxSize 50
+typedef struct{
+    Elemtype data[MaxSize];
+    int top;
+} SqStack;
+</code></pre>
+<ul>
+<li>栈顶指针: S.top, 初始时设置S.top=-1; 栈顶元素: S.data[S.top]</li>
+<li>进栈操作: 栈不满时，栈顶指针先加1，再送值到栈顶元素。</li>
+<li>出栈操作: 栈非空时，先取栈顶元素值，再将栈顶指针减1。</li>
+<li>栈空条件: S.top == -1;栈满条件: S.top == MaxSize-1; 栈长: S.top+1 </li>
+</ul>
+</li>
+<li><p>共享栈</p>
+<pre><code>两个顺序栈共享一个一维数组空间
+- top0=-1时，0号栈为空， top1=MaxSize时1号栈为空
+- 栈满，仅当两个栈顶指针相邻(top1 - top0)=1 时，判断为栈满。
+</code></pre></li>
+</ul>
+<ul>
+<li><p>链栈</p>
+<pre><code>typedef struct Linknode{
+    ElemType data;
+    struct Linknode *next;
+} *LiStack;
+</code></pre><ul>
+<li>多个栈共享存储空间</li>
+<li>不存在栈满上溢,通常采用单链表实现</li>
+<li>规定所有操作都在表头进行</li>
+</ul>
+</li>
+</ul>
+<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>队列(Queue) 只允许在表的一端进行插入，而在表的另一端进行删除</p>
+<h4 id="队列的顺序存储"><a href="#队列的顺序存储" class="headerlink" title="队列的顺序存储"></a>队列的顺序存储</h4><pre><code class="lang-c">#define MaxSize 50
+typedef struct{
+    ElemType data[MaxSize];
+    int front, rear;
+} SqQueue;
+</code></pre>
+<p>存在 <strong>假溢出</strong> 的现象</p>
+<h4 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h4><pre><code>初始时: Q.font=Q.rear=0
+队首指针进1: Q.front=(Q.front+1)%MaxSize
+队尾指针进1: Q.rear=(Q.rear+1)%MaxSize
+队列长度: (Q.rear+MaxSize-Q.front)%MaxSize
+</code></pre><p>区分队满还是队空，三种处理方式:</p>
+<ol>
+<li><p>(普遍)牺牲一个存储单元来区分队空和队满，即队头指针在队尾指针的下一位置作为队满的标志</p>
+<pre><code>队满条件: (Q.rear+1)%MaxSize==Q.front
+队空条件: Q.front==Q.rear
+</code></pre></li>
+<li><p>类型中增设表示元素个数的数据成员</p>
+<pre><code>队空条件: Q.size==0
+队满条件: Q.size==MaxSize
+队满队空都有Q.front==Q.rear
+</code></pre></li>
+<li><p>类型中增设tag数据成员，以区分是队满还是队空。</p>
+<ol>
+<li>tag等于0时，若因删除导致Q.front==Q.rear，则为队空。</li>
+<li>tag等于1时，若因插入导致Q.front==Q.rear, 则为队满。</li>
+</ol>
+</li>
+</ol>
+<h4 id="队列的链式存储"><a href="#队列的链式存储" class="headerlink" title="队列的链式存储"></a>队列的链式存储</h4><pre><code class="lang-c">typedef struct{
+    ElemType data;
+    struct LinkNode *next;
+} LinkNode;
+typedef struct{
+    LinkNode *front, *rear;
+} LinkQueue;
+</code></pre>
+<ul>
+<li>当Q.front==NULL 且Q.rear==NULL时, 链式队列为空</li>
+<li>用单链表表示的链式队列特别适合于数据元素变动比较大的情形，而且不存在队列满且产生溢出的问题。</li>
+</ul>
+<h4 id="双端队列"><a href="#双端队列" class="headerlink" title="双端队列"></a>双端队列</h4><p>输出受限的双端队列，输入受限的双端队列</p>
+<ul>
+<li>能由输入受限的双端队列得到，但不能由输出受限的双端队列得到的输出序列。4132</li>
+<li>能由输出受限的双端队列得到，但不能有输入受限的双端队列得到的输出序列。4213</li>
+<li>既不能由输入受限的双端队列得到，又不能由输出受限的双端队列得到的输出序列。4231</li>
+</ul>
+<h3 id="栈和队列的应用"><a href="#栈和队列的应用" class="headerlink" title="栈和队列的应用"></a>栈和队列的应用</h3><ul>
+<li>栈在括号匹配中的应用</li>
+<li>栈在表达式求值中的应用</li>
+<li>栈在递归中的应用</li>
+<li>队列在层次遍历中的应用</li>
+<li>队列在计算机系统中的应用</li>
+</ul>
+<h3 id="特殊矩阵的压缩存储"><a href="#特殊矩阵的压缩存储" class="headerlink" title="特殊矩阵的压缩存储"></a>特殊矩阵的压缩存储</h3><p>即最小空间存储矩阵，矩阵在计算机图形学，工程计算中占有举足轻重的地位。数据结构考虑的是如何用最小的内存空间来存储同样一组数据，并能方便地提取矩阵中的元素。</p>
+<p>数组一旦被定义，其维数和维界就不再改变。</p>
+<ul>
+<li>数组的存储结构<ul>
+<li>一个数组的所有元素在内存中占用一段连续的存储空间。</li>
+</ul>
+</li>
+<li>矩阵的压缩存储</li>
+<li>稀疏矩阵</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在考研真题中，链式栈出现的概率要比顺序栈低得多。</p>
+<h2 id="Tree-and-Binary-Tree"><a href="#Tree-and-Binary-Tree" class="headerlink" title="Tree and Binary Tree"></a>Tree and Binary Tree</h2><h3 id="复习提示-1"><a href="#复习提示-1" class="headerlink" title="复习提示"></a>复习提示</h3><ul>
+<li>本章多以选择题的形式考查，但也会涉及树遍历相关的算法题</li>
+<li>树和二叉树的性质、遍历操作、转换、存储结构和操作特性等</li>
+<li>满二叉树、完全二叉树，线索二叉树、哈夫曼树的定义和性质</li>
+<li>二叉排序树和二叉平衡树的性质和操作等，都是选择题必然会涉及的内容</li>
+</ul>
+<pre><code class="lang-mermaid">graph LR
+    A(树形结构) --- B(二叉树)
+    B --- B1(&quot;概念: 定义, 存储结构&quot;)
+    B --- B2(&quot;操作&quot;)
+    B --- B3(&quot;应用&quot;)
+    B2 --- B21(&quot;三种遍历&quot;)
+    B2 --- B22(&quot;线索二叉树&quot;)
+    B3 --- B31(&quot;排序二叉树 ---- 平衡二叉树&quot;)
+    B3 --- B32(哈夫曼树)
+    A(树形结构) --- C(树和森林)
+    C --- C1(&quot;概念: 定义, 存储结构&quot;)
+    C --- C2(操作)
+    C2 --- C21(与二叉树的转换)
+    C2 --- C22(遍历)
+    C --- C3(&quot;应用: 并查集&quot;)
+</code></pre>
+<p>树具有如下最基本的性质:</p>
+<ol>
+<li>树种的结点树等于所有结点的度数加 1。</li>
+<li>度为 m 的树种第 i 层上至多有 $m^{i-1}$ 个结点。(i $\ge$ 1)</li>
+<li>高度为 h 的 m 叉树至多有 $(m^h-1)/(m-1)$ 个结点</li>
+<li>具有 n 个结点的 m 叉树的最小高度为 $\lceil log_m{(n(m-1)+1)} \rceil$</li>
+</ol>
+<p>树结点与度之间的关系有:</p>
+<ol>
+<li>总结点数 = $n_0+n_1+n_2+…+n_m$</li>
+<li>总分支数 = $1n_1+2n_2+…+mn_m$</li>
+<li>总结点数 = 总分支数  + 1</li>
+</ol>
+<h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><ul>
+<li><p>几个特殊的二叉树</p>
+<ul>
+<li>满二叉树</li>
+<li>完全二叉树</li>
+<li>二叉排序树</li>
+<li>平衡二叉树</li>
+</ul>
+</li>
+<li><p>二叉树的性质</p>
+<ul>
+<li>$n_0=n_2+1$</li>
+<li>非空二叉树上第 K 层上至多有 $2^{K-1}$个结点 $(k\ge1)$</li>
+<li>高度为 h 的二叉树至多有 $2^h-1$ 个结点</li>
+<li>具有 n 个 (n &gt; 0) 结点的完全二叉树的高度为 $\lceil log_2(n+1)\rceil 或 \lceil log_2n\rceil+1$</li>
+</ul>
+</li>
+<li><p>顺序存储结构</p>
+</li>
+<li><p>链式存储结构</p>
+<pre><code class="lang-c">typedef struct BiTNode{
+    ElemType data;
+    struct BiTNode *lchild, *rchild;
+} BiTNode, *BiTree;
+</code></pre>
+<ul>
+<li>在含有 n 个结点的二叉链表中，含有 n + 1个空链域</li>
+<li>非空指针树 = 总分支数 = n - 1</li>
+<li>空指针树 = n + 1</li>
+</ul>
+</li>
+</ul>
+<h3 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h3><p>按照某条搜索路径访问树中的每个结点，使得每个结点均被访问一次，而且仅被访问一次。</p>
+<ul>
+<li><p>common</p>
+</li>
+<li><p>由遍历序列构造二叉树, 先中，后中，层中</p>
+</li>
+<li><p>常见有: 先序(PreOrder)、中序(InOrder) 和后序(PostOrder)。</p>
+<ul>
+<li>时间复杂度都是O(n).</li>
+<li>递归遍历中，递归工作栈的栈深恰好为树的深度。</li>
+</ul>
+</li>
+<li><p>递归算法和非递归算法的转换</p>
+<ul>
+<li><p>借助栈</p>
+<pre><code class="lang-c">void InOrder2(BiTree T){
+    InitStack(S);
+    BiTree p=T;
+    while(p||!IsEmpty(s)) {
+        if(p) {
+            Push(S, p);
+            p = p-&gt;lchild;
+        } else {
+            Pop(S, p);
+            visit(p);
+            p = p-&gt;rchild;
+        }
+    }
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>层次遍历</p>
+<ul>
+<li><p>借助队列</p>
+<pre><code class="lang-c">void LevelOrder(BiTree T) {
+    InitQueue(Q);
+    BiTree p;
+    EnQueue(Q,T);
+    while(!IsEmpty(Q)) {
+        DeQueue(Q,p);
+        visit(p);
+        if (p-&gt;lchild != NULL)
+            EnQueue(Q, p-&gt;lchild);
+        if (p-&gt;rchild != NULL)
+            EnQueue(Q, p-&gt;rchild);
+    }
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h3><ul>
+<li><p>线索，指向前驱或后继的指针。</p>
+<pre><code class="lang-c++">  typedef struct ThreadNode {
+  ElemType data; 
+      struct ThreadNode *lchild, *rchild; // 左右孩子指针
+      int ltag, rtag;
+  } ThreadNode, *ThreadTree;
+</code></pre>
+</li>
+<li><p>线索二叉树的构造</p>
+<p><img src="pat/dt_001.jpg" alt="dt_001"></p>
+<pre><code class="lang-c++">void InThread(ThreadTree &amp;p, ThreadTree &amp;pre) {
+    // 中序遍历对二叉树线索化的递归算法
+    if (p != NULL) {
+        InThread(p-&gt;lchild, pre);
+        if (p-&gt;lchild == NULL) {
+            p-&gt;lchild = pre;
+            p-&gt;ltag = 1;
+        }
+        if (pre != NULL &amp;&amp; pre-&gt;rchild==NULL) {
+            pre-&gt;rchild = p;
+            pre-&gt;rtag = 1;
+        }
+        pre = p;
+        InThread(p-&gt;rchild, pre);
+    }
+}
+
+void CreateInThread(ThreadTree T) {
+    ThreadTree pre=NULL;
+    if (T != NULL) {
+        InThread(T, pre);
+        pre-&gt;rchild=NULL;
+        pre-&gt;rtag=1;
+    }
+}
+</code></pre>
+<h3 id="树-森林"><a href="#树-森林" class="headerlink" title="树,森林"></a>树,森林</h3><ul>
+<li><p>存储结构</p>
+<ul>
+<li><p>双亲表示法</p>
+<pre><code class="lang-c++">#define MAX_TREE_SIZE 100
+typedef struct {
+    ElemType data;
+    int parent;
+} PTNode;
+typedef struct {
+    PTNode nodes[MAX_TREE_SIZE];
+    int n;
+}PTree;
+</code></pre>
+</li>
+<li><p>孩子表示法</p>
+</li>
+<li><p>孩子兄弟表示法, 又称二叉树表示法</p>
+<pre><code class="lang-c++">typedef struct CSNode {
+    ElemType data;
+    struct CSNode *firstchild, *nextsibling;
+} CSNode, *CSTree
+</code></pre>
+<ul>
+<li>最大的优点是可以方便地实现树转换为二叉树的操作。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>树，森林和二叉树的转换</p>
+</li>
+<li><p>树和森林的遍历</p>
+<ul>
+<li>先根遍历</li>
+<li>后根遍历</li>
+</ul>
+</li>
+<li><p>树的应用 —— 并查集</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="树和二叉树的应用"><a href="#树和二叉树的应用" class="headerlink" title="树和二叉树的应用"></a>树和二叉树的应用</h3><ul>
+<li><p>二叉排序树 (BST)</p>
+<ul>
+<li><p>二叉排序树的非递归查找</p>
+<pre><code class="lang-c++">BSTNode *BST_Search(BiTree T, ElemType key, BSTNode *&amp;p) {
+    p=NULL;
+    while (T!=NULL &amp;&amp; key!=T-&gt;data) {
+        p=T;
+        if (key &lt; T-&gt;data) T=T-&gt;lchild;
+        else T=T-&gt;rchild;
+    }
+    return T;
+}
+</code></pre>
+</li>
+<li><p>二叉排序树的插入</p>
+<pre><code class="lang-c++">int BST_Insert(BiTree &amp;T, KeyType k){
+    if (T == NULL) {
+        T = (BiTree)malloc(sizeof(BSTNode));
+        T-&gt;key=k;
+        T-&gt;lchild=T-&gt;rchild=NULL;
+        return 1;
+    } else if (k == T-&gt;key){
+        return 0;
+    } else if (k &lt; T-&gt;key)
+        return BST_Insert(T-&gt;lchild, k);
+}
+</code></pre>
+</li>
+<li><p>二叉排序树的构造</p>
+<pre><code class="lang-c++">void Create_BST(BiTree &amp;T, KeyType str[], int n) {
+    T=NULL;
+    int i=0;
+    while(i&lt;n){
+        BST_Insert(T,str[i]);
+        i++;
+    }
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>平衡二叉树</p>
+<p>任意结点的左右子树高度差的绝对值不超过1，将这样的二叉树成为平衡二叉树，简称平衡树(AVL)。定义高度差为平衡因子，可能取值为-1,0,1。</p>
+<ul>
+<li><p>调整规律</p>
+<ul>
+<li>LL平衡旋转(右单旋转)</li>
+<li>RR平衡旋转(左单旋转)</li>
+<li>LR平衡旋转(先左后右双旋转)</li>
+<li>RL平衡旋转(先右后左双旋转)</li>
+</ul>
+</li>
+<li><p>平衡二叉树的查找</p>
+<p>含有 n 个结点的平衡二叉树的最大深度为O($log_2{n}$)，因此平衡二叉树的平均查找长度为$O(log_2{n})$。</p>
+</li>
+</ul>
+</li>
+<li><p>哈夫曼树和哈夫曼编码</p>
+<ul>
+<li><p>common</p>
+<ul>
+<li><p>从树的根结点到任意结点的路径长度 (经过的边数)与该结点上权值的乘积，称为该结点的<strong>带权路径长度</strong>。</p>
+</li>
+<li><p>树种所有叶节点的<strong>带权路径长度</strong>之和称为该树的带权路径长度，记为$WPL=\sum<em>{i=1}^{n}w</em>{i}l_{i}$。</p>
+<blockquote>
+<p>$w_i是第i个叶节点所带的权值，l_i是该叶节点到根结点的路径长度$</p>
+</blockquote>
+</li>
+<li><p>在含有n个带权叶子结点的二叉树中，其中带权路径长度(WPL) 最小的二叉树称为<strong>哈夫曼树</strong>，也称<strong>最优二叉树</strong>。</p>
+</li>
+</ul>
+</li>
+<li><p>哈夫曼树的构造</p>
+<ul>
+<li>每个初始结点最终都成为叶节点，且权值越小的结点到跟结点的路径长度越大。</li>
+<li>构建过程中共新建了$n-1$个结点，因此哈夫曼树种的结点总数为$2n-1$。</li>
+</ul>
+</li>
+<li><p>哈夫曼编码</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>本章的内容较多，其中二叉树是极其重要的考点。</li>
+<li>遍历是二叉树的各种操作的基础，统考时会考察遍历过程中对结点的各种其他操作，而且容易结合递归算法和利用栈或队列的非递归算法。</li>
+<li>读者需重点掌握各种遍历方法的代码书写，并学会在遍历的基础上，进行一些其他的相关操作。</li>
+<li>其中递归算法短小精悍，出现的概率较大，请读者不要掉以轻心，要做到对几种遍历方式的程序模板烂熟于心，并结合一定数量的习题，才可以在考试中快速地写出漂亮的代码。</li>
+</ul>
+<h2 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h2><p>图$G$由顶点集$V$和边集$E$组成，记为$G=(V，E)$。有向图$<v, w>: v为弧尾，w为弧头$。无向图$(v, w)$  </p>
+<h3 id="复习提示-2"><a href="#复习提示-2" class="headerlink" title="复习提示"></a>复习提示</h3><ul>
+<li>图算法的难度较大，因此主要掌握<strong>深度优先搜索</strong>与<strong>广度优先搜索</strong>，其他内容以算法题形式出现的概率不高。</li>
+<li>应掌握<ul>
+<li>图的基本概念及基本性质、</li>
+<li>图的存储结构（邻接矩阵、邻接表、邻接多重表和十字链表）及其特性</li>
+<li>存储结构之间的转化</li>
+<li>基于存储结构上的遍历操作和各种应用(拓扑排序、最小生成树、最短路径和关键路径)</li>
+</ul>
+</li>
+<li>图的相关算法较多、易混，但通常只要求掌握其基本思想和实现步骤(能手动模拟)，而算法的具体实现则不是重点</li>
+</ul>
+<pre><code class="lang-mermaid">graph LR
+    A(图) --- B(图的定义)
+    A(图) --- C(图结构的存储)
+    C --- C1(&quot;邻接矩阵法, 邻接表法&quot;)
+    C --- C2(&quot;邻接多重表法, 十字链表&quot;)
+    A(图) --- D(图的遍历)
+    D --- D1(深度优先遍历)
+    D --- D2(广度优先遍历)
+    A(图) --- E(图的相关应用)
+    E --- E1(&quot;最小生成树: Prim算法, Kruskal算法&quot;)
+    E --- E2(&quot;最短路径: Dijkstr算法, Floyd算法&quot;)
+    E --- E3(&quot;拓扑排序: AOV网&quot;)
+    E --- E4(&quot;关键路径: AOE网&quot;)
+</code></pre>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<li><p>有向图，无向图，简单图，多重图，完全图(简单完全图)，子图，</p>
+</li>
+<li><p>连通，连通图和连通分量</p>
+<ul>
+<li>无向图中，顶点 $v$ 到顶点 $w$ 有路径存在，则称 $v$ 和 $w$ 是<strong>连通的</strong>。</li>
+<li>无向图中，若图$G$中任意两个顶点都是连通额，则称图$G$为<strong>连通图</strong>。</li>
+<li>无向图中的极大连通子图称为<strong>连通分量</strong>。极大即要求该连通子图包含其所有的边，<strong><em>极小连通子图</em></strong>  是既要保持图连通又要使得边数最少的子图。</li>
+</ul>
+</li>
+<li><p>强连通图、强连通分量</p>
+<ul>
+<li>有向图中，$v 到 w ，w 到 v$ 都有路径，则称两个顶点是<strong>强连通的</strong>。</li>
+<li>有向图中，图中任意一对顶点都是强连通的，则称此图为<strong>强连通图</strong>。</li>
+<li>有向图中的极大强连通子图称为有向图的<strong>强连通分量</strong></li>
+</ul>
+</li>
+<li><p>生成树、生成森林</p>
+<ul>
+<li><p>连通图的<strong>生成树</strong>包含图中全部顶点的一个极小连通子图，若顶点数为 $n$，则它的生成树含有 $n-1$ 条边。</p>
+</li>
+<li><p>在非连通图中，连通分量的生成树构成了非连通图的生成森林。</p>
+</li>
+</ul>
+</li>
+<li><p>[顶点的度、入度和出度]</p>
+</li>
+<li><p>边的权和网、[稠密图、稀疏图]、[路径、路径长度和回路]、[简单路径、简单回路]、距离、有向树</p>
+</li>
+</ul>
+<h3 id="图的存储及基本操作"><a href="#图的存储及基本操作" class="headerlink" title="图的存储及基本操作"></a>图的存储及基本操作</h3><ul>
+<li><p>临接矩阵法，指用一个一维数组存储图中顶点信息，用一个二维数组存储图中边的信息(即各顶点之间的临接关系)，存储顶点之间临接关系的二维数组称为邻接矩阵。</p>
+<pre><code class="lang-c++">#define MaxVertexNum 100                        // 图顶点数目的最大值
+typedef char VertexType;                        // 顶点的数据类型
+typedef int EdgeType;                            // 带权图中边上权值的数据类型
+typedef struct {
+    VertexType Vex[MaxVertexNum];                // 顶点表
+    EdgeType Edge[MaxVertexNum][MaxVertexNum];    // 邻接矩阵，边表
+    int vexnum, arcnum;                            // 图的当前顶点数和弧数
+} MGraph;
+</code></pre>
+<ul>
+<li>邻接矩阵表示法的空间复杂度为$O(n^2)$，其中 n 为图的顶点数$\vert V \vert$</li>
+<li>1 为存在边，0 为不存在边 </li>
+</ul>
+</li>
+<li><p>邻接表法，是对图$G$中的每个顶点$v_i$建立一个单链表，这个单链表称为边表。边表的头指针和顶点的数据信息采用顺序存储（称为顶点表）。</p>
+<p><img src="pat/dt_508.jpg" alt=""></p>
+<pre><code class="lang-c++">#define MaxVertexNum 100        // 图中顶点数目的最大值
+typedef struct ArcNode {        // 边表结点
+    int adjvex;                    // 该弧所指向的顶点的位置
+    struct ArcNode *next;        // 指向下一条弧的指针
+    // InfoType info;            // 网的边权值
+}ArcNode;
+typedef struct VNode {            // 顶点表结点
+    VertexType data;            // 顶点信息
+    ArcNode *first;                // 指向第一条依附该顶点的弧的指针
+}VNode, AdjList[MaxVertexNum];
+typedef struct {
+    AdjList vertices;            // 邻接表
+    int vexnum, arcnum;            // 图的顶点数和弧数
+} ALGraph;                        // ALGraph是以邻接表存储的图类型
+</code></pre>
+<ul>
+<li>顶点表结点 [ 顶点域(data)，边表头指针(firstarc) ]，边表结点 [ 邻接点域(adjvex)，指针域(nextarc)]</li>
+</ul>
+</li>
+<li><p>十字链表，是有向图的一种链式存储结构</p>
+<p><img src="pat/dt_509.jpg" alt=""></p>
+<pre><code class="lang-c++">#define MaxVertexNum 100            // 图中顶点数目的最大值
+typedef struct ArcNode {            // 边表结点
+    int tailvex, headvex;            // 该弧的头尾结点
+  struct AcrNode *hlink, *tlink;    // 分别指向弧头相同和弧尾相同的结点
+    // InfoType info;                // 相关信息指针
+} ArcNode;
+typedef struct VNode {                // 顶点表结点
+    VertexType data;                // 顶点信息
+    ArcNode *firstin, *firstout;    // 指向第一条入弧和出弧
+} VNode;
+typedef struct {
+    VNode xlist[MaxVertexNum];        // 邻接表
+    int vexnum, arcnum;                // 图的顶点数和弧数
+} GLGraph;                            // GLGraph 是以十字邻接存储的图类型
+</code></pre>
+<ul>
+<li>顶点结点 [data，firstin，firstout]</li>
+<li>弧结点 [tailvex，headvex，hlink，tlink，info]</li>
+</ul>
+</li>
+<li><p>邻接多重表，是无向图的另一种链式存储结构。</p>
+<p><img src="pat/dt_510.jpg" alt=""></p>
+<pre><code class="lang-c++">#define MaxVertexNum 100            // 图中顶点数目的最大值
+typedef struct ArcNode {            // 边结点
+    bool mark;                        // 访问标记
+    int ivex, jvex;                    // 分别指向该弧的两个结点
+    struct ArcNode *ilink, *jlink;    // 分别指向两个顶点的下一条边
+    // InfoType info;                // 相关信息指针
+} ArcNode;        
+typedef struct VNode {
+    VertexType data;                // 顶点表结点
+    ArcNode *firstedge;
+} VNode;
+typedef struct {
+    VNode adjmulist[MaxVertexNum];
+    int vexnum, arcnum;
+} AMLGraph;
+</code></pre>
+<ul>
+<li>顶点结点 [data，firstedge]</li>
+<li>边结点 [mark，ivex，ilink，jvex，jlink，info]</li>
+</ul>
+</li>
+<li><p>图的基本操作</p>
+<ul>
+<li>Adjacent(G, x, y)</li>
+<li>Neighbors(G, x)</li>
+<li>InsertVertex(G, x)</li>
+<li>DeleteVertex(G, x)</li>
+<li>AddEdge(G, x, y)</li>
+<li>RemoveEdge(G, x, y)</li>
+<li>FirstNeighbor(G, x):  存在，返回顶点号，不存在，返回 -1.</li>
+<li>NextNeighbor(G, x, y):  存在，返回顶点号，不存在，返回 -1.</li>
+<li>Get_edge_value(G, x, y)</li>
+<li>Set_edge_value(G, x, y, v)</li>
+</ul>
+</li>
+</ul>
+<h3 id="图的遍历"><a href="#图的遍历" class="headerlink" title="图的遍历"></a>图的遍历</h3><ul>
+<li>Intro<ul>
+<li>图的遍历是指从图中的某一顶点出发，按照某种搜索方法沿着图中的边对图中的所有顶点访问一次且仅访问一次。</li>
+<li>树是一种特殊的图。</li>
+<li>几乎所有图的搜索算法，都可以抽象为优先级搜索或最佳优先搜索。</li>
+</ul>
+</li>
+<li><p>对于同样一个图，基于邻接矩阵存储的遍历所得到的DFS序列和BFS序列是唯一的，基于邻接表的遍历所得到的DFS和BFS序列是不唯一的。</p>
+</li>
+<li><p>广度优先搜索，(Breadth-First-Search, BFS)</p>
+<ul>
+<li><p>info</p>
+<ul>
+<li>会优先考虑最早被发现的顶点，也就是离起点越近的顶点其优先级越高。</li>
+<li>类似于二叉树的层序遍历算法，借助队列。</li>
+<li>Dijkstra 单源最短路径算法和 Prim最小生成树算法也应用了类似的思想。</li>
+<li>图的广度优先遍历还可用于求一些问题的最优解，但初试方面很难涉及。</li>
+<li>邻接表存储$O(\vert V \vert+\vert E \vert)$；邻接矩阵存储$O(\vert V \vert^2)$。</li>
+<li>在广度遍历的过程中，我们可以得到一颗遍历树，称为广度优先生成树。</li>
+</ul>
+</li>
+<li><p>广度优先所有算法的伪代码如下：</p>
+<pre><code class="lang-c++">bool visited[MAX_VERTEX_NUM];
+void BFSTraverse(Graph G) {
+    // 对图G进行广度优先遍历，设访问函数为visit()
+    for (i=0; i&lt;G.vexnum; ++i)        
+        visited[i] = false;                // 访问标记数组初始化
+    InitQueue(Q);                        // 初始化辅助队列Q
+    for (i=0; i&lt;G.vexnum; ++i)            // 从 0 号顶点开始遍历
+        if (!visited[i])                // 对每个连通分量调用一次BFS
+            BFS(G, i);                    // Vi未访问过，从Vi开始BFS
+}
+void BFS(Graph G, int v) {
+    visit(v);                            // 访问初始顶点v
+    visited[v] = true;                    // 对v做已访问标记
+    Enqueue(Q, v);                        // 顶点 v 入队列
+    while(!isEmpty(Q)) {
+        DeQueue(Q, v);                    // 顶点 v 出队列
+        for (w=FirstNeighbor(G, v); w&gt;=0; w=NextNeighbor(G, v, w)
+                                         // 检测 v 所有邻接点
+             if (!visited[w]) {            // w 为 v 的尚未访问的邻接顶点
+                 visit(w);                // 访问顶点 w
+                 visited[w] = true;        // 对w做已访问标记
+                 EnQueue(Q, w);
+             } //if
+    } // while
+}
+</code></pre>
+</li>
+<li><p>BFS算法求解单源最短路径问题(最少边数，非带权)</p>
+<pre><code class="lang-c++">void BFS_MIN_Distance(Graph G, int u) {
+    //d[i]表示从 u 到 i 结点的最短路径
+    for (i=0; i&lt;G.vexnum; ++i)
+        d[i] = ∞;                        // 初始化路径长度
+    visited[u] = true; d[u] = 0;
+    EnQueue(Q, u);
+    while(!isEmpty(Q)) {                // BFS算法主过程
+        DeQueue(Q, u);                    // 队头元素出队
+        for (w=FirstNeighbor(G, u); w&gt;=0; w=NextNeighbor(G, u, w))
+            if (!visited[w]) {            // w为u的尚未访问的邻接顶点
+                visited[w] = true;        // 设已访问标记
+                d[w] = d[u] + 1;        // 路径长度加1
+                EnQueue(Q, w);            // 顶点w入队
+            } // if
+    } //while
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>深度优先搜索 (Depth-First-Search, DFS)</p>
+<ul>
+<li><p>info</p>
+<ul>
+<li>会优先考虑最后被发现的顶点，广泛应用于人工智能方面。</li>
+<li>类似于树的先序遍历(借助递归工作栈)，所遵循的策略是尽可能”深”地搜索一个图。</li>
+<li>邻接矩阵 $O(\vert V \vert^2)$；邻接表 $\vert V \vert+\vert E \vert$ 。</li>
+<li>对连通图调用DFS才能产生深度优先生成树，否则产生的将是深度优先生成森林。</li>
+</ul>
+</li>
+<li><p>算法过程如下</p>
+<pre><code class="lang-c++">bool visited[MAX_VERTEX_NUM];            // 访问标记数组
+void DFSTraverse(Graph G) {
+    // 对图G进行深度优先遍历，访问函数为visit()
+    for (v=0; v&lt;G.vexnum; ++v)
+        visited[v] = false;
+       for (v=0; v&lt;G.vexnum; ++v)
+        if (!visited[v])
+            DFS(G, V);
+}
+void DFS(Graph G, int v) {
+    // 从顶点 v 出发, 采用递归思想，深度优先遍历图G
+    visit(v);                            // 访问顶点
+    visited[v] = true;                    // 设已访问标记
+    for (w=FirstNeighbor(G, v); w&gt;=0; w=NextNeighbor(G, v, w))
+        if (!visited[w]) {                // w 为 u 的尚未访问的邻接顶点
+            DFS(G, w);
+            // if 
+        }
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="图的应用"><a href="#图的应用" class="headerlink" title="图的应用"></a>图的应用</h3><p>本节是历年考查重点。图的应用主要包括: 最小生成(代价)树，最短路径，拓扑排序和关键路径。一般，直接以算法设计题形式考查的可能性很小，而更多的是结合图的实例来考查算法的具体执行过程，读者必须学会手工模拟给定图的各个算法的执行过程。此外，还需掌握对给定模型建立相应的图去解决问题的方法。</p>
+<ul>
+<li><p>最小生成树</p>
+<ul>
+<li>性质：不唯一；边的权值之和唯一；边数为顶点数减1</li>
+<li>算法：Prim(普里姆)，适于求解边稠密的图的最小生成树。</li>
+<li>算法：Kruskal(克鲁斯卡尔)，是一种按权值的递增次序选择合适的边来构成最小生成树的方法，适于边稀疏而顶点多的图。</li>
+</ul>
+</li>
+<li><p>最短路径，带权路径长度最短的那条路径称为最短路径。</p>
+<ul>
+<li>Dijkstra。<ul>
+<li>常用于求解带权有向图中某个源点到其余各顶点的最短路径。</li>
+<li>基于贪心算法</li>
+</ul>
+</li>
+<li>Floyd-Warshall。</li>
+</ul>
+</li>
+<li><p>拓扑排序</p>
+<ul>
+<li><p>Info</p>
+<ul>
+<li>有向无环图，简称DAG图。</li>
+<li>AOV网，DAG图中，顶点表示活动，有向边表示活动的先后关系。</li>
+<li>拓扑排序是对有向无环图的顶点的一种排序。</li>
+<li>对一般图来说，若其邻接矩阵是三角矩阵，则存在拓扑序列；反之则不一定成立。</li>
+</ul>
+</li>
+<li><p>算法实现</p>
+<pre><code class="lang-c++">bool TopologicalSort(Graph G) {
+    // 若G存在拓扑序列，返回true; 否则返回false,这时 G 中存在环
+    InitStack(S);                            // 初始化栈，存储入度为0的顶点
+    for (int i=0; i&lt;G.vexnum; i++)
+        if (indegree[i]==0)
+            Push(S, i);                        // 将所有入度为 0 的顶点进栈
+    int count = 0;                            // 计数，记录当前已经输出的顶点数
+    while(!IsEmpty(S)) {                    // 栈不空，则存在入度为 0 的顶点
+        Pop(S, i);                            // 栈顶元素出栈
+        print[count++]=i;                    // 输出顶点 i.
+        for (p=G.vertices[i].firstarc; p ; p=p-&gt;nextarc) {
+            // 将所有 i 指向的顶点的入度间1，并且将入度减为0的顶点压入栈 S
+            v = p-&gt;adjvex;
+            if (!(--indegree[v]))
+                Push(S, v);                    // 入度为0， 则入栈
+        } // for
+    } // while
+    if (count&lt;G.vexnum)
+        return false;                        // 排序失败，有向图中有回路
+    else
+        return true;                        // 拓扑排序成功
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>关键路径</p>
+<ul>
+<li><p>Info</p>
+<ul>
+<li>在带权有向图中，顶点表示事件，有向边表示活动，边上的权值表示完成该活动的开销(如完成活动所需的时间)，则称这种有向图为用边表示活动的网络，简称AOE网。</li>
+<li>性质<ul>
+<li>只有在某顶点所代表的事件发生后，从该顶点出发的各有向边所代表的活动才能开始。</li>
+<li>只有在进入某一顶点的各有向边所代表的活动都已结束时，该顶点所代表的事件才能发生。</li>
+</ul>
+</li>
+<li>AOE网中，仅有一个入度为0的顶点(开始顶点，源点)，也仅有一个出度为0的顶点(结束顶点，汇点)</li>
+<li>AOE网中具有最大路径长度的路径称为<strong>关键路径</strong>，关键路径上的活动称为关键活动。</li>
+<li>AOE网中的路径并不唯一，关键路径上的活动都是关键活动，决定整个过程的关键因素。</li>
+</ul>
+</li>
+<li><p>寻找关键活动时所用到的几个参量的定义。</p>
+<ol>
+<li><p>事件$v_k$的最早发生事件$v_e(k)$</p>
+<p>$v_e(源点)=0$</p>
+<p>$v_e(k)=Max{v_e(j)+Weight(v_j, v_k)}, Weight(v_j, v_k)表示<v_j, v_k>上的权值$</p>
+</li>
+<li><p>事件$v_j$的最迟发生事件$v_l(j)$</p>
+<p>$v_l(汇点)=v_e(汇点)$</p>
+<p>$v_l(j)=Min{v_l(k)-Weight(v_j, v_k)}, Weight(v_j, v_k)表示<v_j, v_k>上的权值$</p>
+</li>
+<li><p>活动$a_i$的最早开始事件$e(i)$</p>
+<p>该时间是指该活动的起点所表示的事件最早发生的时间。</p>
+<p>若边$<v_k,vj>$表示活动$a_i$，则有$e(i)=v_e(k)$</p>
+</li>
+<li><p>活动$a_i$的最迟开始事件$l(i)$</p>
+<p>该时间是指该活动的终点所表示的事件最迟发生时间与该活动所需时间之差。</p>
+<p>若边$<v_k,v_j>$表示活动$a<em>i$，则有$l</em>(i)=v_l(j)-Weight(v_k,v_j)$</p>
+</li>
+<li><p>一个活动$a_i$的最迟开始时间$l(i)$和其最早开始时间$e(i)$的差额$d(i)=l(i)-e(i)$</p>
+<p>它是指该活动的时间余量，即活动$a_i$可拖延的时间。</p>
+<p>称$l(i)-e(i)=0$即$l(i)=e(i)$的活动$a_i$是关键活动。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Searching"><a href="#Searching" class="headerlink" title="Searching"></a>Searching</h2><h3 id="复习提示-3"><a href="#复习提示-3" class="headerlink" title="复习提示"></a>复习提示</h3><p>本章是考研命题的终点</p>
+<ul>
+<li>对应散列查找，应掌握散列表的构造、冲突处理方法(各种方法的处理过程)、查找成功和查找失败的平均查找长度、散列查找的特征和性能分析。</li>
+<li>对于折半查找，应掌握折半查找的过程、构造判定树、分析查找成功和查找失败的平均查找长度等</li>
+<li>B树和B+ 树是本章的难点，对于B树，考纲要求掌握插入、删除和查找的操作过程，不要求掌握算法；对于B+ 树，仅要求了解其基本概念和性质。</li>
+<li>串部分需要重点掌握next数组的构造方法。</li>
+</ul>
+<pre><code class="lang-mermaid">graph LR
+    A(查找) --- B(&quot;基本概念: 静态查找, 动态查找&quot;)
+    A --- C(线性结构)
+    C --- C1(顺序查找)
+    C --- C2(折半查找)
+    C --- C3(分块查找)
+    A --- D(树形结构)
+    D --- D1(二叉排序树)
+    D --- D2(二叉平衡树)
+    D --- D3(B树, B+树)
+    A --- E(&quot;散列结构 ---- 散列表&quot;)
+    E --- E1(性能分析)
+    E --- E2(冲突处理)
+    A --- F(&quot;效率指标 --- 平均查找长度&quot;)
+    F --- F1(查找成功)
+    F --- F2(查找失败)
+</code></pre>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li>查找，查找表，</li>
+<li>静态查找：顺序查找，折半查找，散列查找等</li>
+<li>动态查找：二叉排序树的查找，散列查找。（二叉平衡树和B树都是二叉排序树的改进）</li>
+<li>关键字，平均查找长度(ASL，衡量查找算法效率的最主要的指标)</li>
+</ul>
+<h3 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h3><p>又称线性查找，主要用于在线性表中进行查找。</p>
+<ul>
+<li><p>一般线性表的顺序查找</p>
+<pre><code class="lang-c++">typedef struct {
+    ElemType *elem;        // 元素存储空间基址，建表时按实际长度分配，0号单元留空
+    Int TableLen;
+}SSTable;
+int Search_Seq(SSTable ST, ElemType key) {
+    ST.elem[0] = key;
+    for (i=ST.TableLen;ST.elem[i]!=key;--i);
+    return i;
+}
+</code></pre>
+<ul>
+<li>ST.elem[0] = key 称为 “哨兵”，可以避免很多不必要的判断语句，从而提高程序效率。</li>
+<li>$ASL<em>{成功}=\frac{n+1}{2}\qquad ASL</em>{不成功}=n+1$</li>
+<li>缺点: 当 n 较大时，平均查找长度较大，效率低。</li>
+<li>优点: 对数据元素的存储没有要求，顺序存储或链式存储皆可。</li>
+<li>注意：对线性链表只能进行顺序查找。</li>
+</ul>
+</li>
+<li><p>有序表的顺序查找</p>
+<ul>
+<li>$ASL<em>{成功}=\frac{n+1}{2}; ASL</em>{不成功}=\frac{n}{2}+\frac{n}{n+1}$</li>
+<li>比一般的顺序查找算法好一些</li>
+<li>注意：有序表的顺序查找和后面的折半查找的思想是不一样的，且有序表的顺序查找中的线性表可以是链式存储结构。</li>
+</ul>
+</li>
+</ul>
+<h3 id="折半查找"><a href="#折半查找" class="headerlink" title="折半查找"></a>折半查找</h3><p>又称二分查找，仅适用于有序的顺序表。</p>
+<ul>
+<li><p>算法</p>
+<pre><code class="lang-c++">int Binary_Search(SeqList L, ElemType key) {
+    int low=0, high=L.Tablelen-1, mid;
+    while (low&lt;=high) {
+        mid=(low+high)/2;
+        if (L.elem[mid] == key)
+            return mid;
+        else if (L.elem[mid] &gt; key)
+            high=mid-1;
+        else
+            low=mid+1;
+    }
+    return -1;
+}
+</code></pre>
+<ul>
+<li>$ASL\approx log_2(n+1)-1$，判定树种的树高$h=\lceil log_2(n+1) \rceil$</li>
+<li>即$O(log_2n)$，平均情况下比顺序表查找的效率高。</li>
+<li>折半查找仅适用于线性表的顺序存储结构，不适合与链式存储结构，且要求元素按关键字有序排列。</li>
+</ul>
+</li>
+</ul>
+<h3 id="分块查找"><a href="#分块查找" class="headerlink" title="分块查找"></a>分块查找</h3><ul>
+<li><p>又称索引顺序查找，结合顺序查找和折半查找各自的优点，既有动态结构，又适于快速查找。</p>
+</li>
+<li><p>块内无序，块间有序</p>
+</li>
+<li>分为两步<ol>
+<li>在索引表中确定待查记录所在的块，可以顺序或折半查找索引表。</li>
+<li>在块内顺序查找。</li>
+</ol>
+</li>
+</ul>
+<h3 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h3><h3 id="B-树"><a href="#B-树" class="headerlink" title="B+树"></a>B+树</h3><h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><h3 id="串"><a href="#串" class="headerlink" title="串"></a>串</h3><h2 id="Sorting"><a href="#Sorting" class="headerlink" title="Sorting"></a>Sorting</h2><h3 id="复习提示-4"><a href="#复习提示-4" class="headerlink" title="复习提示"></a>复习提示</h3><ul>
+<li>堆排序（建堆、插入和调整）、快速排序（划分、过程特征）、归并排序（归并路数、归并过程）是重点。</li>
+<li>读者应深入掌握各种排序算法的思想、排序过程(能动手模拟) 和特征（初态的影响、时空复杂度、稳定性、适用性等）</li>
+<li>常以选择题的形式考查不同算法之间的对比</li>
+<li>对于一些常用排序算法的关键代码，要达到熟练编写的程度；</li>
+<li>看到某特定序列，读者应具有选择最优排序算法（根据排序算法特征）的能力。</li>
+</ul>
+<pre><code class="lang-mermaid">graph LR
+    A(排序) --- B(基本概念)
+    B --- B1(稳定性)
+    B --- B2(&quot;衡量标准: 时,空复杂度&quot;)
+    A --- C(内部排序)
+    C --- C1(插入排序)
+    C1 --- C11(直接插入排序)
+    C1 --- C12(折半插入排序)
+    C1 --- C13(希尔排序)
+    C --- C2(交换排序)
+    C2 --- C21(冒泡排序)
+    C2 --- C22(快速排序)
+    C --- C3(选择排序)
+    C3 --- C31(简单选择排序)
+    C3 --- C32(堆排序)
+    C --- C4(归并排序)
+    C --- C5(基数排序)
+    A --- D(&quot;外部排序----多路归并排序&quot;)
+</code></pre>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
+<li><p>直接插入排序</p>
+<pre><code class="lang-c++">void InsertSort(ElemType A[], int n) {
+    int i,j;
+    for (i=2; i&lt;=n; i++) {                // 依次将A[2] ~ A[n]插入到前面已排序序列
+        if (A[i].key &lt; A[i-1].key) 
+            A[0]=A[i];
+            for (j=i-1; A[0].key &lt; A[j].key; --j)
+                A[j+1]=A[j];            // 向后挪位
+            A[j+1]=A[0];
+        }
+}
+</code></pre>
+</li>
+<li><p>折半插入排序</p>
+<pre><code class="lang-c++">void InsertSort(ElemType A[], int n) {
+    int i,j,low,high,mid;
+    for (i=2; i&lt;=n; i++) {                // 依次将A[2] ~ A[n]插入到前面已排序序列
+        A[0]=A[i];
+        low=1; high=i-1;
+        while (low &lt;= high) {
+            mid=(low+high)/2;
+            if (A[mid].key &gt; A[0].key) high=mid-1;
+            else low=mid+1;
+        }
+        for (j=i-1; j&gt;=high+1; --j)
+            A[j+1]=A[j];
+        A[high+1]=A[0];
+    }
+}
+</code></pre>
+</li>
+<li><p>希尔排序</p>
+<pre><code class="lang-c++">void ShellSort(ElemType A[], int n) {
+    for (dk=n/2; dk&gt;=1; dk=dk/2)
+        for (i=dk+1; i&lt;=n; ++1) 
+            if(A[i].key &lt; A[i-dk].key) {
+                 A[0]=A[i];
+                for (j=i-dk; j&gt;0&amp;&amp;A[0].key &lt; A[j].key; j-=dk)
+                    A[j+dk]=A[j];
+                A[j+dk]=A[0];
+            }//if
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h3><ul>
+<li><p>冒泡排序</p>
+<pre><code class="lang-c++">void BubbleSort(ElemType A[], int n) {
+    for (i=0; i&lt;n-1; i++) {
+        flag=false;
+        for(j=n-1; j&gt;i; j--)
+            if (A[j-1].key &gt; A[j].key) {
+                swap(A[j-1], A[j]);
+                flag=true;
+            }
+        if (flag==false)
+            return;
+    }
+}
+</code></pre>
+</li>
+<li><p>快速排序</p>
+<pre><code class="lang-c++">void QuickSort(ElemType A[], int low, int high) {
+    if (low&lt;high) {
+        int pivotpos=Partition(A, low, high);
+        QuickSort(A, low, pivotpos-1);
+        QuickSort(A, pivotpos+1, high);
+    }
+}
+int partition(ElemType A[], int low, int high) {
+    ElemType pivot=A[low];
+    while(low&lt;high) {
+        while(low&lt;high&amp;&amp;A[high] &gt;= pivot) --high;
+        A[low]=A[high];
+        while(low&lt;high&amp;&amp;A[low] &lt;= pivot) ++low;
+        A[high]=A[low];
+    }
+    A[low]=pivot;
+    return low;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><ul>
+<li><p>简单选择排序</p>
+<pre><code class="lang-c++">void SelectSort(Ele;mType A[], int n) {
+    for (i=0; i&lt;n-1; i++) {
+        min = 1;
+        for(j=i+1; j&lt;n; j++)
+            if(A[j] &lt; A[min]) min=j;
+        if(min!=i) swap(A[i], A[min])
+    }
+}
+</code></pre>
+</li>
+<li><p>堆排序</p>
+<ul>
+<li><p>建立大根堆算法</p>
+<pre><code class="lang-c++">void BuildMaxHeap(ElemType A[], int len) {
+    for (int i=len/2; i&gt;0; i--)
+        AdjustDown(A, i, len);
+}
+void AdjustDown(ElemType A[], int k, int len) {
+    A[0]=A[k];
+    for (i=2*k; i&lt;=len; i*=2) {
+        if (i&lt;len &amp;&amp; A[i]&lt;A[i+1])
+            i++;
+        if (A[0]&gt;=A[i]) break;
+        else {
+            A[k]=A[i];
+            k=i;
+        }
+    } // forj
+    A[k]=A[0];
+}
+</code></pre>
+</li>
+<li><p>堆排序算法</p>
+<pre><code class="lang-c++">void HeapSort(ElemType A[], int len) {
+    BuildMaxHeap(A, len);
+    for(i=len; i&gt;1; i--) {
+        Swap(A[i], A[1]);
+        AjustDown(A, 1, i-1);
+    }//for
+}
+</code></pre>
+</li>
+<li><p>下面是向上调整堆的算法</p>
+<pre><code class="lang-c++">void AjustUp(ElemType A[], int k) {
+    A[0]=A[k];
+    int i=k/2;
+    while(i&gt;0&amp;&amp;A[i]&lt;A[0]) {
+        A[k]=A[i];
+        k=i;
+        i=k/2;
+    }//while
+    A[k]=A[0];
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><h3 id="各种内部排序算法的比较和应用"><a href="#各种内部排序算法的比较和应用" class="headerlink" title="各种内部排序算法的比较和应用"></a>各种内部排序算法的比较和应用</h3><h3 id="外部排序"><a href="#外部排序" class="headerlink" title="外部排序"></a>外部排序</h3><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><h1 id="Principles-of-Computer-Composition"><a href="#Principles-of-Computer-Composition" class="headerlink" title="Principles of Computer Composition"></a>Principles of Computer Composition</h1><h2 id="大纲-1"><a href="#大纲-1" class="headerlink" title="大纲"></a>大纲</h2><h3 id="考查目标-1"><a href="#考查目标-1" class="headerlink" title="[考查目标]"></a>[考查目标]</h3><p>1。理解单处理器计算机系统中各部件的内部工作原理、组成结构以及相互连接方式，<br>具有完整的计算机系统的整机概念。<br>2。理解计算机系统层次化结构概念，熟悉硬件与软件之间的界面，掌握指令集体系结<br>构的基本知识和基本实现方法。<br>3。能够综合运用计算机组成的基本原理和基本方法，对有关计算机硬件系统中的理论<br>和实际问题进行计算、分析，对一些基本部件进行简单设计；并能对高级程序设计语言（如<br>C 语言）中的相关问题进行分析。</p>
+<h3 id="一、计算机系统概述"><a href="#一、计算机系统概述" class="headerlink" title="一、计算机系统概述"></a>一、计算机系统概述</h3><p>（一）计算机发展历程<br>（二）计算机系统层次结构<br>1。计算机系统的基本组成<br>2。计算机硬件的基本组成<br>3。计算机软件和硬件的关系<br>4。计算机的工作过程<br>（三）计算机性能指标<br>吞吐量、响应时间；CPU 时钟周期、主频、CPI、CPU 执行时间；MIPS、MFLOPS 、GFLOPS、<br>TFLOPS、PFLOPS。</p>
+<h3 id="二、数据的表示和运算"><a href="#二、数据的表示和运算" class="headerlink" title="二、数据的表示和运算"></a>二、数据的表示和运算</h3><p>（一）数制与编码<br>1。进位计数制及其相互转换<br>2。真值和机器数<br>3.BCD 码<br>4。字符与字符串<br>5。校验码<br>（二）定点数的表示和运算<br>1。定点数的表示<br>无符号数的表示；有符号整数的表示。<br>2。定点数的运算<br>定点数的位移运算；原码定点数的加减运算；补码定点数的加/减运算；定点数的乘/<br>除运算；溢出概念和判别方法。<br>（三）浮点数的表示和运算<br>1。浮点数的表示<br>IEEE 754 标准<br>2。浮点数的加/减运算<br>（四）算术逻辑单元 ALU<br>1。串行加法器和并行加法器<br>2。算术逻辑单元 ALU 的功能和结构</p>
+<h3 id="三、存储器层次结构"><a href="#三、存储器层次结构" class="headerlink" title="三、存储器层次结构"></a>三、存储器层次结构</h3><p>（一）存储器的分类<br>（二）存储器的层次化结构<br>（三）半导体随机存取存储器<br>1.SRAM 存储器<br>2.DRAM 存储器<br>3。只读存储器<br>4.Flash 存储器<br>（四）主存储器与 CPU 的连接<br>（五）双口 RAM 和多模块存储器<br>（六）高速缓冲存储器（Cache）<br>1.Cache 的基本工作原理<br>2.Cache 和主存之间的映射方式<br>3.Cache 中主存块的替换算法<br>4.Cache 写策略<br>（七）虚拟存储器<br>1。虚拟存储器的基本概念<br>2。页式虚拟存储器<br>3。段式虚拟存储器<br>4。段页式虚拟存储器<br>5.TLB（快表）</p>
+<h3 id="四、指令系统"><a href="#四、指令系统" class="headerlink" title="四、指令系统"></a>四、指令系统</h3><p>（一）指令格式<br>1。指令的基本格式<br>2。定长操作码指令格式<br>3。扩展操作码指令格式<br>（二）指令的寻址方式<br>1。有效地址的概念<br>2。数据寻址和指令寻址<br>3。常见寻址方式<br>（三）CISC 和 RISC 的基本概念</p>
+<h3 id="五、中央处理器（CPU）"><a href="#五、中央处理器（CPU）" class="headerlink" title="五、中央处理器（CPU）"></a>五、中央处理器（CPU）</h3><p>（一）CPU 的功能和基本结构<br>（二）指令执行过程<br>（三）数据通路的功能和基本结构<br>（四）控制器的功能和工作原理<br>1、硬布线控制器<br>2、微程序控制器<br>微程序、微指令和微命令；微指令的编码方式；微地址的形式方式。<br>（五）指令流水线<br>1、指令流水线的基本概念<br>2、指令流水线的基本实现<br>3、超标量和动态流水线的基本概念</p>
+<h3 id="六、总线"><a href="#六、总线" class="headerlink" title="六、总线"></a>六、总线</h3><p>（一）总线概述<br>1、总线的基本概念<br>2、总线的分类<br>3、总线的组成及性能指标<br>（二）总线仲裁<br>1、集中仲裁方式<br>2、分布仲裁方式<br>（三）总线操作和定时<br>1、同步定时方式<br>2、异步定时方式<br>（四）总线标准</p>
+<h3 id="七、输入输出（I-O）系统"><a href="#七、输入输出（I-O）系统" class="headerlink" title="七、输入输出（I/O）系统"></a>七、输入输出（I/O）系统</h3><p>（一）I/O 系统基本概念<br>（二）外部设备<br>1、输入设备：键盘、鼠标<br>2、输出设备：显示器、打印机<br>3、外存储器：硬盘存储器、磁盘阵列、光盘存储器<br>（三）I/O 接口（I/O 控制器）<br>1、I/O 接口的功能和基本结构<br>2、I/O 端口及其编址<br>（四）I/O 方式<br>1、程序查询方式<br>2、程序中断方式<br>中断的基本概念；中断响应过程；中断处理过程；多重中断和中断屏蔽的概念。<br>3、DMA 方式<br>DMA 控制器的组成，DMA 传送过程。</p>
+<h2 id="一、计算机系统概述-1"><a href="#一、计算机系统概述-1" class="headerlink" title="一、计算机系统概述"></a>一、计算机系统概述</h2><h3 id="复习提示-5"><a href="#复习提示-5" class="headerlink" title="复习提示"></a>复习提示</h3><blockquote>
+<p>重点掌握各个性能指标的计算和基本概念。</p>
+</blockquote>
+<p><img src="pat/b001.jpg" alt=""></p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>小记</p>
+<ul>
+<li>机器语言是计算机唯一可以直接执行的语言。</li>
+</ul>
+<p>计算机硬件的发展</p>
+<blockquote>
+<ol>
+<li>第一代（1946-1957）——电子管时代：机器语言编程；</li>
+<li>第二代（1958-1964）——晶体管时代：开始使用高级语言；有了操作系统的雏形；</li>
+<li>第三代（1965-1971）——中小规模集成电路时代；开始有了分时操作系统</li>
+<li>第四代（1972年至今）——超大规模集成电路时代；产生了微处理器；诸如并行、流水线、高速缓存和虚拟存储器等概念用在了这代计算机中。</li>
+</ol>
+</blockquote>
+<p>计算机发展趋势两极化</p>
+<blockquote>
+<ol>
+<li>一极是微型计算机向更微型化、网络化、高性能、多用途方向发展；</li>
+<li>另一极是巨型机向更巨型化、超高速、并行处理、智能化方向发展；</li>
+</ol>
+</blockquote>
+<p>冯诺依曼机（存储程序）</p>
+<blockquote>
+<ol>
+<li>计算机硬件系统有运算器、存储器、控制器、输入设备和输出设备5大部件组成；<ul>
+<li>运算器的核心是算术逻辑单源（ALU）</li>
+<li>控制器由程序计数器（PC）、指令寄存器（IR）和控制单元（CU）</li>
+</ul>
+</li>
+<li>指令和数据以同等地位存储在存储器中，并可按地址寻访。</li>
+<li>指令和数据均用二进制代码表示</li>
+<li>指令由操作码和地址码组成</li>
+<li>指令在存储器内按顺序存放</li>
+<li>早起的冯诺依曼机以运算器为中心，现代的是以存储器为中心。</li>
+</ol>
+</blockquote>
+<p>本门课程主要讨论传统机器 M1 和微程序机器 M0 的组成原理及设计思想。</p>
+<h3 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h3><ul>
+<li><p>机器字长，计算机能直接处理的二进制数据的位数，一般等于内部寄存器的大小，决定计算机的运算精度。</p>
+</li>
+<li><p>数据通路带宽，数据总线一次所能并行传送信息的位数。（外部）</p>
+</li>
+<li><p>主存容量，指主存储器所能存储信息的最大容量，MAR的位数反映存储单元的个数。</p>
+</li>
+<li><p>运算速度</p>
+<ul>
+<li><p>吞吐量，指系统在单位时间内处理请求的数量。主要取决于主存的存取周期</p>
+</li>
+<li><p>响应时间，</p>
+</li>
+<li><p>CPU时钟周期，常为节拍脉冲或T周期，即主频的倒数，是CPU中最小的时间单位，每个动作至少需要1个时钟周期。</p>
+</li>
+<li><p>主频（CPU时钟频率），衡量机器速度的重要参数，主频越高，速度越快。1Hz表示每秒1次。</p>
+</li>
+<li><p>CPU（Clock cycle Per Instruction），指执行一条指令所需的时钟周期数。</p>
+</li>
+<li><p>CPU执行时间，指运行一个程序所花费的时间</p>
+<p>CPU执行时间=CPU时钟周期数 / 主频=（指令条数 x CPI）/ 主频</p>
+</li>
+<li><p>MIPS、MFLOPS(百万)、GFLOPS(十亿)、TFLOPS(万亿)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="二、数据的表示和运算-1"><a href="#二、数据的表示和运算-1" class="headerlink" title="二、数据的表示和运算"></a>二、数据的表示和运算</h2><h3 id="复习提示-6"><a href="#复习提示-6" class="headerlink" title="复习提示"></a>复习提示</h3><blockquote>
+<p>纵观近几年真题，不难发现unsigned,  short, int, long, float, double, 等在C语言中的表示，运算，溢出判断，隐式类型转换, 强制类型转换, IEEE 754浮点数的表示, 以及浮点数的运算，都是考验的重点，需要牢固掌握。</p>
+</blockquote>
+<h3 id="数制与编码"><a href="#数制与编码" class="headerlink" title="数制与编码"></a>数制与编码</h3><ul>
+<li><p>Base</p>
+<ul>
+<li>十进制（Decimal）,二进制（Binary）,十六进制（Hexadecimal）,八进制（Octal）</li>
+<li>基数，位权，数码</li>
+</ul>
+</li>
+<li><p>进制转换</p>
+<ul>
+<li>二转八或十六，<ul>
+<li>一串二进制数分为3位（八进制）或4位（十六进制）</li>
+<li>整数，小数点向左；小数，小数点向右</li>
+</ul>
+</li>
+<li>任意转十，数码与权值相乘，乘积叠加</li>
+<li>十转任意，基数乘除法<ul>
+<li>整数部分采用除基取余法</li>
+<li>小数部分采用乘基取整法，ps: 不是每个十进制小数都可以准确地用二进制表示，比如0.3</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>真值，机器数：真值是带符号“+” 和 “-”的数, 机器数是将符号数字化的数，如 0为正，1为负。</li>
+<li>BCD码，二进制编码的十进制数（Binary-Coded Decimal, BCD），常采用4位二进制数表示一位十进制的数码。有8421码，余3码，2421码</li>
+<li>字符与字符串<ul>
+<li>字符编码ASCII码，占7位，表示128个字符。</li>
+<li>汉字的表示和编码，占两个字节。</li>
+</ul>
+</li>
+<li>校验码<ul>
+<li>奇偶校验码，具有局限性，奇偶校验只能发现数据代码中奇数位的出错情况，但不能纠正错误，常用于对存储器数据的检查或传输数据的检查。</li>
+<li>海明（汉明）校验码 *</li>
+<li>循环冗余校验（CRC）码 *</li>
+</ul>
+</li>
+</ul>
+<h3 id="定点数的表示与运算"><a href="#定点数的表示与运算" class="headerlink" title="定点数的表示与运算"></a>定点数的表示与运算</h3><h3 id="浮点数的表示与运算"><a href="#浮点数的表示与运算" class="headerlink" title="浮点数的表示与运算"></a>浮点数的表示与运算</h3><h3 id="算术逻辑单源（ALU）"><a href="#算术逻辑单源（ALU）" class="headerlink" title="算术逻辑单源（ALU）"></a>算术逻辑单源（ALU）</h3><h2 id="三、存储系统"><a href="#三、存储系统" class="headerlink" title="三、存储系统"></a>三、存储系统</h2><h2 id="四、指令系统-1"><a href="#四、指令系统-1" class="headerlink" title="四、指令系统"></a>四、指令系统</h2><h2 id="五、中央处理器"><a href="#五、中央处理器" class="headerlink" title="五、中央处理器"></a>五、中央处理器</h2><h2 id="六、总线-1"><a href="#六、总线-1" class="headerlink" title="六、总线"></a>六、总线</h2><h2 id="七、输入-输出系统"><a href="#七、输入-输出系统" class="headerlink" title="七、输入/输出系统"></a>七、输入/输出系统</h2><h1 id="Computer-Operating-System"><a href="#Computer-Operating-System" class="headerlink" title="Computer Operating System"></a>Computer Operating System</h1><h2 id="大纲-2"><a href="#大纲-2" class="headerlink" title="大纲"></a>大纲</h2><h3 id="考查目标-2"><a href="#考查目标-2" class="headerlink" title="[考查目标]"></a>[考查目标]</h3><p>1。掌握操作系统的基本概念、基本原理和基本功能，理解操作系统的整体运行过程。<br>2。掌握操作系统进程、内存、文件和 I/O 管理的策略、算法、机制以及相互关系。<br>3。能够运用所学的操作系统原理、方法与技术分析问题和解决问题，并能利用 C 语言<br>描述相关算法。</p>
+<h3 id="一、操作系统概述"><a href="#一、操作系统概述" class="headerlink" title="一、操作系统概述"></a>一、操作系统概述</h3><p>（一）操作系统的概念、特征、功能和提供的服务<br>（二）操作系统的发展与分类<br>（三）操作系统的运行环境<br>1。内核态与用户态<br>2。中断、异常<br>3。系统调用<br>（四）操作系统体系结构</p>
+<h3 id="二、进程管理"><a href="#二、进程管理" class="headerlink" title="二、进程管理"></a>二、进程管理</h3><p>（一）进程与线程<br>1。进程概念<br>2。进程的状态与转换<br>3。进程控制<br>4。进程组织<br>5。进程通信<br>共享存储系统；消息传递系统；管道通信。<br>6。线程概念与多线程模型<br>（二）处理机调度<br>1。调度的基本概念<br>2。调度时机、切换与过程<br>3。调度的基本准则<br>4。调度方式<br>5。典型调度算法<br>先来先服务调度算法；短作业（短进程、短线程）优先调度算法；时间片轮转调度算法；<br>优先级调度算法；高响应比优先调度算法；多级反馈队列调度算法。<br>（三）同步与互斥<br>1。进程同步的基本概念<br>2。实现临界区互斥的基本方法<br>软件实现方法；硬件实现方法。<br>3。信号量<br>4。管程<br>5。经典同步问题<br>生产者-消费者问题；读者-写者问题；哲学家进餐问题。<br>（四）死锁<br>1。死锁的概念<br>2。死锁处理策略<br>3。死锁预防<br>4。死锁避免<br>系统安全状态，银行家算法。<br>5。死锁检测和解除</p>
+<h3 id="三、内存管理"><a href="#三、内存管理" class="headerlink" title="三、内存管理"></a>三、内存管理</h3><p>（一）内存管理基础<br>1。内存管理概念<br>程序装入与链接；逻辑地址与物理地址空间；内存保护。<br>2。交换与覆盖<br>3。连续分配管理方式<br>4。非连续分配管理方式<br>分页管理方式；分段管理方式；段页式管理方式。<br>（二）虚拟内存管理<br>1。虚拟内存基本概念<br>2。请求分页管理方式<br>3。页面置换算法<br>最佳置换算法（OPT）；先进先出置换算法（FIFO）；最近最少使用置换算法（LRU）；<br>时钟置换算法（CLOCK）。<br>4。页面分配策略<br>5。工作集<br>6。抖动</p>
+<h3 id="四、文件管理"><a href="#四、文件管理" class="headerlink" title="四、文件管理"></a>四、文件管理</h3><p>（一）文件系统基础<br>1。文件概念<br>2。文件的逻辑结构<br>顺序文件；索引文件；索引顺序文件。<br>3。目录结构<br>文件控制块和索引节点；单级目录结构和两级目录结构；树形目录结构；图形目录结构。<br>4。文件共享<br>5。文件保护<br>访问类型；访问控制。<br>（二）文件系统实现<br>1。文件系统层次结构<br>2。目录实现<br>3。文件实现<br>（三）磁盘组织与管理<br>1。磁盘的结构<br>2。磁盘调度算法<br>3。磁盘的管理</p>
+<h3 id="五、输入输出（I-O）管理"><a href="#五、输入输出（I-O）管理" class="headerlink" title="五、输入输出（I/O）管理"></a>五、输入输出（I/O）管理</h3><p>（一）I/O 管理概述<br>1.I/O 控制方式<br>2。 I/O 软件层次结构<br>（二）I/O 核心子系统<br>1.I/O 调度概念<br>2。高速缓存与缓冲区<br>3。设备分配与回收<br>4。假脱机技术（SPOOLing）</p>
+<h1 id="Computer-Network"><a href="#Computer-Network" class="headerlink" title="Computer Network"></a>Computer Network</h1><h3 id="考查目标-3"><a href="#考查目标-3" class="headerlink" title="[考查目标]"></a>[考查目标]</h3><p>1。掌握计算机网络的基本概念、基本原理和基本方法。<br>2。掌握计算机网络的体系结构和典型网络协议，了解典型网络设备的组成和特点，理<br>解典型网络设备的工作原理。<br>3。能够运用计算机网络的基本概念、基本原理和基本方法进行网络系统的分析、设计<br>和应用。</p>
+<h3 id="一、计算机网络体系结构"><a href="#一、计算机网络体系结构" class="headerlink" title="一、计算机网络体系结构"></a>一、计算机网络体系结构</h3><p>（一）计算机网络概述<br>1。计算机网络的概念、组成与功能<br>2。计算机网络的分类<br>3。计算机网络的标准化工作及相关组织<br>（二）计算机网络体系结构与参考模型<br>1。计算机网络分层结构<br>2。计算机网络协议、接口、服务等概念<br>3.ISO/OSI 参考模型和 TCP/IP 模型</p>
+<h3 id="二、物理层"><a href="#二、物理层" class="headerlink" title="二、物理层"></a>二、物理层</h3><p>（一）通信基础<br>1。信道、信号、宽带、码元、波特、速率、信源与信宿等基本概念<br>2。奈奎斯特定理与香农定理<br>3。编码与调制<br>4。电路交换、报文交换与分组交换<br>5。数据报与虚电路<br>（二）传输介质<br>1。双绞线、同轴电缆、光纤与无线传输介质<br>2。物理层接口的特性<br>（三）物理层设备<br>1。中继器<br>2。集线器</p>
+<h3 id="三、数据链路层"><a href="#三、数据链路层" class="headerlink" title="三、数据链路层"></a>三、数据链路层</h3><p>（一）数据链路层的功能<br>（二）组帧<br>（三）差错控制<br>1。检错编码<br>2。纠错编码<br>（四）流量控制与可靠传输机制<br>1。流量控制、可靠传输与滑轮窗口机制<br>2。停止-等待协议<br>3。后退 N 帧协议（GBN）<br>4。选择重传协议（SR）<br>（五）介质访问控制<br>1。信道划分<br>频分多路复用、时分多路复用、波分多路复用、码分多路复用的概念和基本原理。<br>2。随即访问<br>ALOHA 协议；CSMA 协议；CSMA/CD 协议；CSMA/CA 协议。<br>3。轮询访问<br>令牌传递协议<br>（六）局域网<br>1。局域网的基本概念与体系结构<br>2。以太网与 IEEE 802.3<br>3.IEEE 802.11<br>4。令牌环网的基本原理<br>（七）广域网<br>1。广域网的基本概念<br>2.PPP 协议<br>3.HDLC 协议<br>（八）数据链路层设备<br>1。网桥的概念和基本原理<br>2。局域网交换机及其工作原理。</p>
+<h3 id="四、网络层"><a href="#四、网络层" class="headerlink" title="四、网络层"></a>四、网络层</h3><p>（一）网络层的功能<br>1。异构网络互联<br>2。路由与转发<br>3。拥塞控制<br>（二）路由算法<br>1。静态路由与动态路由<br>2。距离-向量路由算法<br>3。链路状态路由算法<br>4。层次路由<br>（三）IPv4<br>1.IPv4 分组<br>2.IPv4 地址与 NAT<br>3。子网划分与子网掩码、CIDR<br>4.ARP 协议、DHCP 协议与 ICMP 协议<br>（四）IPv6<br>1.IPv6 的主要特点<br>2.IPv6 地址<br>（五）路由协议<br>1。自治系统<br>2。域内路由与域间路由<br>3.RIP 路由协议<br>4.OSPF 路由协议<br>5.BGP 路由协议<br>（六）IP 组播<br>1。组播的概念<br>2.IP 组播地址<br>（七）移动 IP<br>1。移动 IP 的概念<br>2。移动 IP 的通信过程<br>（八）网络层设备<br>1。路由器的组成和功能<br>2。路由表与路由转发</p>
+<h3 id="五、传输层"><a href="#五、传输层" class="headerlink" title="五、传输层"></a>五、传输层</h3><p>（一）传输层提供的服务<br>1。传输层的功能<br>2。传输层寻址与端口<br>3。无连接服务与面向连接服务<br>（二）UDP 协议<br>1.UDP 数据报<br>2.UDP 校验<br>（三）TCP 协议<br>1.TCP 段<br>2.TCP 连接管理<br>3.TCP 可靠传输<br>4.TCP 流量控制与拥塞控制</p>
+<h3 id="六、应用层"><a href="#六、应用层" class="headerlink" title="六、应用层"></a>六、应用层</h3><p>（一）网络应用模型<br>1。客户/服务器模型<br>2.P2P 模型<br>（二）DNS 系统<br>1。层次域名空间<br>2。域名服务器<br>3。域名解析过程<br>（三）FTP<br>1.FTP 协议的工作原理<br>2。控制连接与数据连接<br>（四）电子邮件<br>1。电子邮件系统的组成结构<br>2。电子邮件格式与 MIME<br>3.SMTP 协议与 POP3 协议<br>（五）WWW<br>1.WWW 的概念与组成结构<br>2.HTTP 协议</p>
+<h1 id="Examination-Syllabus"><a href="#Examination-Syllabus" class="headerlink" title="Examination Syllabus"></a>Examination Syllabus</h1><ul>
+<li><p>基础级</p>
+<blockquote>
+<blockquote>
+<p>中文题目只涉及初级编程分5个段位</p>
+</blockquote>
+<p>青铜</p>
+<blockquote>
+<p>理解并掌握简单数据类型及表达式、程序的顺序执行结构和简单分支结构。具备使用一门编程语言进行简单的计算、基本的格式化输入输出以及解决简单分支问题的能力。</p>
+</blockquote>
+<p>白银</p>
+<blockquote>
+<p>在达到青铜段位要求的基础上，理解并掌握程序的循环结构。具备编程解决复杂嵌套分支和嵌套循环问题的能力。</p>
+</blockquote>
+<p>黄金</p>
+<blockquote>
+<p>在达到白银段位要求的基础上， 理解并掌握数组（包括高维数组和字符串）和结构体等概念，具备编程解决相关问题的能力。</p>
+</blockquote>
+<p>白金</p>
+<blockquote>
+<p>在达到黄金段位要求的基础上，理解并掌握函数和递归的概念，具备使用函数和递归解决较为复杂的综合性问题的能力，并掌握一定的调试技巧。</p>
+</blockquote>
+<p>钻石</p>
+<blockquote>
+<p>在达到白金段位要求的基础上，掌握简单排序、二分查找算法，具备解决较为复杂的综合性问题的能力，能够编写并调试代码量超过50行的程序。</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>乙级</p>
+<blockquote>
+<blockquote>
+<p>中文题目只涉及基础编程最难到排序算法  </p>
+</blockquote>
+<p>考生应具备以下基本能力：   </p>
+<pre><code>  1. 基本的C/C++的代码设计能力，以及相关开发环境的基本调试技巧；   
+  2. 理解并掌握最基本的数据存储结构，即：数组、链表；   
+  3. 理解并熟练编程实现与基本数据结构相关的基础算法，包括递归、排序、查找等；   
+  4. 能够分析算法的时间复杂度、空间复杂度和算法稳定性；   
+  5. 具备问题抽象和建模的初步能力，并能够用所学方法解决实际问题。     
+</code></pre></blockquote>
+</li>
+<li><p>甲级</p>
+<blockquote>
+<blockquote>
+<p>英文题目涉及基础数据结构</p>
+</blockquote>
+<p>在达到乙级要求的基础上，还要求：   </p>
+<pre><code>  1. 具有充分的英文阅读理解能力；   
+  2. 理解并掌握基础数据结构，包括：线性表、树、图；   
+  3. 理解并熟练编程实现经典高级算法，包括哈希映射、并查集、最短路径、拓扑排序、关键路径、贪心、深度优先搜索、广度优先搜索、回溯剪枝等；   
+  4. 具备较强的问题抽象和建模能力，能实现对复杂实际问题的模拟求解。   
+</code></pre></blockquote>
+</li>
+</ul>
+<ul>
+<li>顶级<blockquote>
+<blockquote>
+<p>国际竞赛水平相当涉及高级数据结构与经典算法的应用</p>
+</blockquote>
+<p>在达到甲级要求的基础上，还要求：   </p>
+<pre><code>  1. 对高级、复杂数据结构掌握其用法并能够熟练使用，如后缀数组、树状数组、线段树、Treap、静态KDTree等；   
+  2. 能够利用经典算法思想解决较难的算法问题，如动态规划、计算几何、图论高级应用（包括最大流/最小割，强连通分支、最近公共祖先、最小生成树、欧拉序列）等，并灵活运用；   
+  3. 能够解决复杂的模拟问题，编写并调试代码量较大的程序；   
+  4. 具有缜密的科学思维，考虑问题周全，能够正确应对复杂问题的边界情况。   
+</code></pre></blockquote>
+</li>
+</ul>
+<p>PAT</p>
+<ul>
+<li><p><a href="https://m.baidu.com/ala/c/www.360doc.cn/mip/758686899.html" target="_blank" rel="noopener">PAT准备，希望甲级高分，该如何高效地准备？如何算是真正有效地刷题？</a></p>
+</li>
+<li><p>《算法导论》</p>
+</li>
+<li><p>学会C++</p>
+</li>
+<li><p>数据结构我大概学了这几块：</p>
+<pre><code>线性结构：数组，栈，队列看一下就过了；链表自己实现了一遍；常见排序理解并会写。
+树：二叉搜索树熟练（尤其是各种遍历）；AVL树和红黑树尽力理解了一下，我是真的记不住……
+图：BFS, DFS, 最短路（dijkstra, spfa, floyd）。这里的题目最常见，要能写得很灵活。
+其它：堆，背包问题（良心教程https://github.com/tianyicui/pack/blob/master/V2.pdf），贪心问题， KMP（还没遇到过题目）。
+</code></pre></li>
+</ul>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li><a href="https://wenku.baidu.com/view/f3098732f342336c1eb91a37f111f18583d00c32.html" target="_blank" rel="noopener">大纲</a></li>
+</ul>
