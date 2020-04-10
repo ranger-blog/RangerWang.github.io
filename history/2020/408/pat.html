@@ -1202,8 +1202,21 @@ void AdjustDown(ElemType A[], int k, int len) {
 </li>
 </ul>
 <h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><h3 id="各种内部排序算法的比较和应用"><a href="#各种内部排序算法的比较和应用" class="headerlink" title="各种内部排序算法的比较和应用"></a>各种内部排序算法的比较和应用</h3><h3 id="外部排序"><a href="#外部排序" class="headerlink" title="外部排序"></a>外部排序</h3><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><h1 id="Principles-of-Computer-Composition"><a href="#Principles-of-Computer-Composition" class="headerlink" title="Principles of Computer Composition"></a>Principles of Computer Composition</h1><h2 id="大纲-1"><a href="#大纲-1" class="headerlink" title="大纲"></a>大纲</h2><h3 id="考查目标-1"><a href="#考查目标-1" class="headerlink" title="[考查目标]"></a>[考查目标]</h3><p>1。理解单处理器计算机系统中各部件的内部工作原理、组成结构以及相互连接方式，<br>具有完整的计算机系统的整机概念。<br>2。理解计算机系统层次化结构概念，熟悉硬件与软件之间的界面，掌握指令集体系结<br>构的基本知识和基本实现方法。<br>3。能够综合运用计算机组成的基本原理和基本方法，对有关计算机硬件系统中的理论<br>和实际问题进行计算、分析，对一些基本部件进行简单设计；并能对高级程序设计语言（如<br>C 语言）中的相关问题进行分析。</p>
-<h3 id="一、计算机系统概述"><a href="#一、计算机系统概述" class="headerlink" title="一、计算机系统概述"></a>一、计算机系统概述</h3><p>（一）计算机发展历程<br>（二）计算机系统层次结构<br>1。计算机系统的基本组成<br>2。计算机硬件的基本组成<br>3。计算机软件和硬件的关系<br>4。计算机的工作过程<br>（三）计算机性能指标<br>吞吐量、响应时间；CPU 时钟周期、主频、CPI、CPU 执行时间；MIPS、MFLOPS 、GFLOPS、<br>TFLOPS、PFLOPS。</p>
-<h3 id="二、数据的表示和运算"><a href="#二、数据的表示和运算" class="headerlink" title="二、数据的表示和运算"></a>二、数据的表示和运算</h3><p>（一）数制与编码<br>1。进位计数制及其相互转换<br>2。真值和机器数<br>3.BCD 码<br>4。字符与字符串<br>5。校验码<br>（二）定点数的表示和运算<br>1。定点数的表示<br>无符号数的表示；有符号整数的表示。<br>2。定点数的运算<br>定点数的位移运算；原码定点数的加减运算；补码定点数的加/减运算；定点数的乘/<br>除运算；溢出概念和判别方法。<br>（三）浮点数的表示和运算<br>1。浮点数的表示<br>IEEE 754 标准<br>2。浮点数的加/减运算<br>（四）算术逻辑单元 ALU<br>1。串行加法器和并行加法器<br>2。算术逻辑单元 ALU 的功能和结构</p>
+<h3 id="一、计算机系统概述"><a href="#一、计算机系统概述" class="headerlink" title="一、计算机系统概述"></a>一、计算机系统概述</h3><p>（一）计算机发展历程<br>（二）计算机系统层次结构</p>
+<ol>
+<li>计算机系统的基本组成</li>
+<li><p>计算机硬件的基本组成</p>
+</li>
+<li><p>计算机软件和硬件的关系</p>
+</li>
+<li><p>计算机的工作过程</p>
+</li>
+</ol>
+<p>（三）计算机性能指标<br>吞吐量、响应时间；CPU 时钟周期、主频、CPI、CPU 执行时间；MIPS、MFLOPS 、GFLOPS、<br>TFLOPS、PFLOPS。</p>
+<h3 id="二、数据的表示和运算"><a href="#二、数据的表示和运算" class="headerlink" title="二、数据的表示和运算"></a>二、数据的表示和运算</h3><p>（一）数制与编码<br>1。进位计数制及其相互转换<br>2。真值和机器数<br>3.BCD 码</p>
+<ol>
+<li>字符与字符串<br>5。校验码<br>（二）定点数的表示和运算<br>1。定点数的表示<br>无符号数的表示；有符号整数的表示。<br>2。定点数的运算<br>定点数的位移运算；原码定点数的加减运算；补码定点数的加/减运算；定点数的乘/<br>除运算；溢出概念和判别方法。<br>（三）浮点数的表示和运算<br>1。浮点数的表示<br>IEEE 754 标准<br>2。浮点数的加/减运算<br>（四）算术逻辑单元 ALU<br>1。串行加法器和并行加法器<br>2。算术逻辑单元 ALU 的功能和结构</li>
+</ol>
 <h3 id="三、存储器层次结构"><a href="#三、存储器层次结构" class="headerlink" title="三、存储器层次结构"></a>三、存储器层次结构</h3><p>（一）存储器的分类<br>（二）存储器的层次化结构<br>（三）半导体随机存取存储器<br>1.SRAM 存储器<br>2.DRAM 存储器<br>3。只读存储器<br>4.Flash 存储器<br>（四）主存储器与 CPU 的连接<br>（五）双口 RAM 和多模块存储器<br>（六）高速缓冲存储器（Cache）<br>1.Cache 的基本工作原理<br>2.Cache 和主存之间的映射方式<br>3.Cache 中主存块的替换算法<br>4.Cache 写策略<br>（七）虚拟存储器<br>1。虚拟存储器的基本概念<br>2。页式虚拟存储器<br>3。段式虚拟存储器<br>4。段页式虚拟存储器<br>5.TLB（快表）</p>
 <h3 id="四、指令系统"><a href="#四、指令系统" class="headerlink" title="四、指令系统"></a>四、指令系统</h3><p>（一）指令格式<br>1。指令的基本格式<br>2。定长操作码指令格式<br>3。扩展操作码指令格式<br>（二）指令的寻址方式<br>1。有效地址的概念<br>2。数据寻址和指令寻址<br>3。常见寻址方式<br>（三）CISC 和 RISC 的基本概念</p>
 <h3 id="五、中央处理器（CPU）"><a href="#五、中央处理器（CPU）" class="headerlink" title="五、中央处理器（CPU）"></a>五、中央处理器（CPU）</h3><p>（一）CPU 的功能和基本结构<br>（二）指令执行过程<br>（三）数据通路的功能和基本结构<br>（四）控制器的功能和工作原理<br>1、硬布线控制器<br>2、微程序控制器<br>微程序、微指令和微命令；微指令的编码方式；微地址的形式方式。<br>（五）指令流水线<br>1、指令流水线的基本概念<br>2、指令流水线的基本实现<br>3、超标量和动态流水线的基本概念</p>
@@ -1217,38 +1230,32 @@ void AdjustDown(ElemType A[], int k, int len) {
 <ul>
 <li>机器语言是计算机唯一可以直接执行的语言。</li>
 </ul>
-<p>计算机硬件的发展</p>
-<blockquote>
-<ol>
-<li>第一代（1946-1957）——电子管时代：机器语言编程；</li>
-<li>第二代（1958-1964）——晶体管时代：开始使用高级语言；有了操作系统的雏形；</li>
-<li>第三代（1965-1971）——中小规模集成电路时代；开始有了分时操作系统</li>
-<li>第四代（1972年至今）——超大规模集成电路时代；产生了微处理器；诸如并行、流水线、高速缓存和虚拟存储器等概念用在了这代计算机中。</li>
-</ol>
-</blockquote>
-<p>计算机发展趋势两极化</p>
-<blockquote>
-<ol>
-<li>一极是微型计算机向更微型化、网络化、高性能、多用途方向发展；</li>
-<li>另一极是巨型机向更巨型化、超高速、并行处理、智能化方向发展；</li>
-</ol>
-</blockquote>
-<p>冯诺依曼机（存储程序）</p>
-<blockquote>
-<ol>
-<li>计算机硬件系统有运算器、存储器、控制器、输入设备和输出设备5大部件组成；<ul>
-<li>运算器的核心是算术逻辑单源（ALU）</li>
-<li>控制器由程序计数器（PC）、指令寄存器（IR）和控制单元（CU）</li>
+<p>英文缩写</p>
+<ul>
+<li><p>存储器</p>
+<ul>
+<li>MAR - 地址寄存器，多少个存储单元，即为内存</li>
+<li>MDR - 数据寄存器，64k x 32位，即为存储容量</li>
 </ul>
 </li>
-<li>指令和数据以同等地位存储在存储器中，并可按地址寻访。</li>
-<li>指令和数据均用二进制代码表示</li>
-<li>指令由操作码和地址码组成</li>
-<li>指令在存储器内按顺序存放</li>
-<li>早起的冯诺依曼机以运算器为中心，现代的是以存储器为中心。</li>
-</ol>
-</blockquote>
-<p>本门课程主要讨论传统机器 M1 和微程序机器 M0 的组成原理及设计思想。</p>
+<li><p>运算器</p>
+<ul>
+<li>ALU - 算术逻辑单元</li>
+<li>ACC - 累加器</li>
+<li>MQ - 乘商寄存器</li>
+<li>X - 操作数寄存器</li>
+<li>IX - 变址寄存器</li>
+<li>BR - 基址寄存器</li>
+<li>PSW - 程序状态寄存器</li>
+</ul>
+</li>
+<li>控制器<ul>
+<li>PC - 程序计数器</li>
+<li>IR - 指令寄存器，OP-操作码，Ad - 地址码</li>
+<li>CU - 控制单元</li>
+</ul>
+</li>
+</ul>
 <h3 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h3><ul>
 <li><p>机器字长，计算机能直接处理的二进制数据的位数，一般等于内部寄存器的大小，决定计算机的运算精度。</p>
 </li>
@@ -1266,7 +1273,7 @@ void AdjustDown(ElemType A[], int k, int len) {
 </li>
 <li><p>主频（CPU时钟频率），衡量机器速度的重要参数，主频越高，速度越快。1Hz表示每秒1次。</p>
 </li>
-<li><p>CPU（Clock cycle Per Instruction），指执行一条指令所需的时钟周期数。</p>
+<li><p>CPI（Clock cycle Per Instruction），指执行一条指令所需的时钟周期数。</p>
 </li>
 <li><p>CPU执行时间，指运行一个程序所花费的时间</p>
 <p>CPU执行时间=CPU时钟周期数 / 主频=（指令条数 x CPI）/ 主频</p>
@@ -1276,18 +1283,38 @@ void AdjustDown(ElemType A[], int k, int len) {
 </ul>
 </li>
 </ul>
+<h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><ul>
+<li>计算机的功能部件</li>
+</ul>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0001.png" alt="image-20200409090700853"></p>
+<ul>
+<li><p>三种语言</p>
+<p>机器语言，汇编语言(汇编程序)，高级语言(编译-汇编 | 翻译)</p>
+</li>
+<li><p>计算机的工作过程</p>
+<pre><code>取指令：(PC) -&gt; MAR -&gt; M -&gt; MDR -&gt; IR
+分析指令: OP(IR) -&gt; CU
+执行指令: Ad(IP) -&gt; MAR -&gt; M -&gt; MDR -&gt; ACC
+      : (PC)+1 -&gt; PC
+</code></pre></li>
+<li><p>计算机系统的多层次结构</p>
+<p>微程序机器层 - 传统机器语言层 - 操作系统层 - 汇编语言层 - 高级语言层.</p>
+<p>“裸机” - 没有配备软件的纯硬件系统，3-5层称为虚拟机</p>
+</li>
+<li><p>计算机体系结构和计算机组成的区别和联系</p>
+</li>
+<li></li>
+</ul>
 <h2 id="二、数据的表示和运算-1"><a href="#二、数据的表示和运算-1" class="headerlink" title="二、数据的表示和运算"></a>二、数据的表示和运算</h2><h3 id="复习提示-6"><a href="#复习提示-6" class="headerlink" title="复习提示"></a>复习提示</h3><blockquote>
 <p>纵观近几年真题，不难发现unsigned,  short, int, long, float, double, 等在C语言中的表示，运算，溢出判断，隐式类型转换, 强制类型转换, IEEE 754浮点数的表示, 以及浮点数的运算，都是考验的重点，需要牢固掌握。</p>
 </blockquote>
 <h3 id="数制与编码"><a href="#数制与编码" class="headerlink" title="数制与编码"></a>数制与编码</h3><ul>
-<li><p>Base</p>
-<ul>
+<li>Base<ul>
 <li>十进制（Decimal）,二进制（Binary）,十六进制（Hexadecimal）,八进制（Octal）</li>
 <li>基数，位权，数码</li>
 </ul>
 </li>
-<li><p>进制转换</p>
-<ul>
+<li>进制转换<ul>
 <li>二转八或十六，<ul>
 <li>一串二进制数分为3位（八进制）或4位（十六进制）</li>
 <li>整数，小数点向左；小数，小数点向右</li>
@@ -1302,7 +1329,11 @@ void AdjustDown(ElemType A[], int k, int len) {
 </ul>
 </li>
 <li>真值，机器数：真值是带符号“+” 和 “-”的数, 机器数是将符号数字化的数，如 0为正，1为负。</li>
-<li>BCD码，二进制编码的十进制数（Binary-Coded Decimal, BCD），常采用4位二进制数表示一位十进制的数码。有8421码，余3码，2421码</li>
+<li>BCD码，二进制编码的十进制数（Binary-Coded Decimal, BCD），常采用4位二进制数表示一位十进制的数码。有8421码，余3码，2421码<ul>
+<li>余3码，在8421码的基础上加(0011)</li>
+<li>2421码，特点是大于5的4位二进制数中的最高位为1。如: 5 —&gt; 1011</li>
+</ul>
+</li>
 <li>字符与字符串<ul>
 <li>字符编码ASCII码，占7位，表示128个字符。</li>
 <li>汉字的表示和编码，占两个字节。</li>
@@ -1315,7 +1346,327 @@ void AdjustDown(ElemType A[], int k, int len) {
 </ul>
 </li>
 </ul>
-<h3 id="定点数的表示与运算"><a href="#定点数的表示与运算" class="headerlink" title="定点数的表示与运算"></a>定点数的表示与运算</h3><h3 id="浮点数的表示与运算"><a href="#浮点数的表示与运算" class="headerlink" title="浮点数的表示与运算"></a>浮点数的表示与运算</h3><h3 id="算术逻辑单源（ALU）"><a href="#算术逻辑单源（ALU）" class="headerlink" title="算术逻辑单源（ALU）"></a>算术逻辑单源（ALU）</h3><h2 id="三、存储系统"><a href="#三、存储系统" class="headerlink" title="三、存储系统"></a>三、存储系统</h2><h2 id="四、指令系统-1"><a href="#四、指令系统-1" class="headerlink" title="四、指令系统"></a>四、指令系统</h2><h2 id="五、中央处理器"><a href="#五、中央处理器" class="headerlink" title="五、中央处理器"></a>五、中央处理器</h2><h2 id="六、总线-1"><a href="#六、总线-1" class="headerlink" title="六、总线"></a>六、总线</h2><h2 id="七、输入-输出系统"><a href="#七、输入-输出系统" class="headerlink" title="七、输入/输出系统"></a>七、输入/输出系统</h2><h1 id="Computer-Operating-System"><a href="#Computer-Operating-System" class="headerlink" title="Computer Operating System"></a>Computer Operating System</h1><h2 id="大纲-2"><a href="#大纲-2" class="headerlink" title="大纲"></a>大纲</h2><h3 id="考查目标-2"><a href="#考查目标-2" class="headerlink" title="[考查目标]"></a>[考查目标]</h3><p>1。掌握操作系统的基本概念、基本原理和基本功能，理解操作系统的整体运行过程。<br>2。掌握操作系统进程、内存、文件和 I/O 管理的策略、算法、机制以及相互关系。<br>3。能够运用所学的操作系统原理、方法与技术分析问题和解决问题，并能利用 C 语言<br>描述相关算法。</p>
+<h3 id="定点数的表示与运算"><a href="#定点数的表示与运算" class="headerlink" title="定点数的表示与运算"></a>定点数的表示与运算</h3><ul>
+<li><p>表示</p>
+<p>源码，补码，反码，移码</p>
+</li>
+<li><p>运算</p>
+<ul>
+<li><p>移位</p>
+<p>算术移位，逻辑移位，循环移位</p>
+</li>
+<li><p>加减运算 | 符号扩展 | 溢出概念和判别方法 | 乘法 | 除法</p>
+</li>
+</ul>
+</li>
+<li><p>强制类型转换</p>
+</li>
+</ul>
+<h3 id="浮点数的表示与运算"><a href="#浮点数的表示与运算" class="headerlink" title="浮点数的表示与运算"></a>浮点数的表示与运算</h3><ul>
+<li><p>表示</p>
+<p>表示格式 | 规格化浮点数 | IEEE754标准 | 顶点, 浮点表示的区别</p>
+</li>
+<li><p>加减运算</p>
+<p>对阶 | 尾数求和 | 规格化 | 舍入 | 溢出判断 | 强制类型转换</p>
+</li>
+</ul>
+<h3 id="算术逻辑单元（ALU）"><a href="#算术逻辑单元（ALU）" class="headerlink" title="算术逻辑单元（ALU）"></a>算术逻辑单元（ALU）</h3><ul>
+<li><p>加法器</p>
+<p>一位全加器 | 串行加法器 | 并行加法器</p>
+</li>
+<li><p>算术逻辑单元的功能和结构</p>
+</li>
+</ul>
+<h2 id="三、存储系统"><a href="#三、存储系统" class="headerlink" title="三、存储系统"></a>三、存储系统</h2><h3 id="1-存储器的层次结构"><a href="#1-存储器的层次结构" class="headerlink" title="1. 存储器的层次结构"></a>1. 存储器的层次结构</h3><ul>
+<li><p>分类</p>
+<p>作用 介质 存取方式 可保存性</p>
+</li>
+<li><p>性能指标</p>
+<p>存储容量 | 单位成本 | 存储速度</p>
+</li>
+</ul>
+<h3 id="2-存储器的层次化结构"><a href="#2-存储器的层次化结构" class="headerlink" title="2. 存储器的层次化结构"></a>2. 存储器的层次化结构</h3><p>（磁带，光盘）—&gt; 磁盘—&gt; 主存—&gt; Cache—&gt; 寄存器 </p>
+<h3 id="3-半导体随机存储器"><a href="#3-半导体随机存储器" class="headerlink" title="3. 半导体随机存储器"></a>3. 半导体随机存储器</h3><ul>
+<li><p>半导体存储芯片</p>
+<ul>
+<li>基本结构：存储矩阵，译码驱动，读写电路，读/写控制线，片选线，地址线，数据线</li>
+<li>74138译码器</li>
+<li>tips<ul>
+<li>地址线和数据线共同反应存储芯片容量大小，如地址线10根，数据线8根，则芯片容量=$2^{10}*8$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SRAM和DRAM</p>
+<ul>
+<li>SRAM，DRAM工作原理</li>
+<li>RAM的读 写周期<ul>
+<li>写周期不明确</li>
+</ul>
+</li>
+<li>SRAM 和 DRAM 的比较</li>
+<li>tips<ul>
+<li>地址码相同的多个存储元构成一个存储单元</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>只读存储器</p>
+<ul>
+<li><p>ROM的特点，</p>
+</li>
+<li><p>类型</p>
+<p>掩膜式只读存储器MROM，一次可编程只读存储器PROM，可擦除可编程只读存储器EPROM，闪速存储器Flash Memory，固态硬盘Solid State Drivers.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-主存储器与CPU的连接"><a href="#4-主存储器与CPU的连接" class="headerlink" title="4. 主存储器与CPU的连接"></a>4. 主存储器与CPU的连接</h3><ul>
+<li><p>连接原理</p>
+<p>数据总线，地址总线，控制总线</p>
+</li>
+<li><p>主存容量的扩展</p>
+<ul>
+<li>位扩展法</li>
+<li>字扩展法</li>
+<li>字位同时扩展法</li>
+</ul>
+</li>
+<li><p>存储芯片的地址分配和片选</p>
+<ul>
+<li>线选法</li>
+<li>译码片选法</li>
+</ul>
+</li>
+<li><p>存储器与CPU的连接</p>
+<ul>
+<li>合理选择存储芯片</li>
+<li>地址线，数据线，读/写命令线，片选线等的连接</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-双端口RAM和多模块存储器"><a href="#5-双端口RAM和多模块存储器" class="headerlink" title="5. 双端口RAM和多模块存储器"></a>5. 双端口RAM和多模块存储器</h3><ul>
+<li>双端口RAM</li>
+<li>多模块存储器<ul>
+<li>单体多字存储器</li>
+<li>多体并行存储器</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-高速缓冲存储器"><a href="#6-高速缓冲存储器" class="headerlink" title="6. 高速缓冲存储器"></a>6. 高速缓冲存储器</h3><ul>
+<li><p>程序访问的局部性原理</p>
+</li>
+<li><p>Cache的基本工作原理</p>
+</li>
+<li><p>Cache和主存的映射方式</p>
+<p>直接，全相联，组相联  映射</p>
+</li>
+<li><p>Cache中主存块的替换算法</p>
+</li>
+<li><p>Cache写策略</p>
+</li>
+</ul>
+<h3 id="7-虚拟存储器"><a href="#7-虚拟存储器" class="headerlink" title="7. 虚拟存储器"></a>7. 虚拟存储器</h3><ul>
+<li>基本概念</li>
+<li>页式虚拟存储器</li>
+<li>段式虚拟存储器</li>
+<li>段页式虚拟存储器</li>
+<li>块表（TLB）</li>
+<li>虚拟存储器与Cache的比较</li>
+</ul>
+<h2 id="四、指令系统-1"><a href="#四、指令系统-1" class="headerlink" title="四、指令系统"></a>四、指令系统</h2><h3 id="1-指令格式"><a href="#1-指令格式" class="headerlink" title="1. 指令格式"></a>1. 指令格式</h3><ul>
+<li><p>基本格式</p>
+<p>零(一，二，三，四)地址指令</p>
+</li>
+<li><p>定长操作码指令格式</p>
+</li>
+<li><p>扩展操作码指令格式</p>
+</li>
+</ul>
+<h3 id="2-指令寻址方式"><a href="#2-指令寻址方式" class="headerlink" title="2. 指令寻址方式"></a>2. 指令寻址方式</h3><ul>
+<li><p>指令寻址和数据寻址</p>
+</li>
+<li><p>常见的数据寻址方式</p>
+<p>隐含寻址，立即（数）~，直接~，间接~，寄存器~，寄存器间接~，相对~，基址~，变址~，堆栈~</p>
+</li>
+</ul>
+<h3 id="3-CISC和RISC的基本概念"><a href="#3-CISC和RISC的基本概念" class="headerlink" title="3. CISC和RISC的基本概念"></a>3. CISC和RISC的基本概念</h3><ul>
+<li>复杂指令系统计算机(CISC)</li>
+<li>精简指令系统计算机(RISC)</li>
+<li>两者的比较</li>
+</ul>
+<h2 id="五、中央处理器"><a href="#五、中央处理器" class="headerlink" title="五、中央处理器"></a>五、中央处理器</h2><h3 id="1-CPU的功能和基本结构"><a href="#1-CPU的功能和基本结构" class="headerlink" title="1. CPU的功能和基本结构"></a>1. CPU的功能和基本结构</h3><ul>
+<li><p>功能</p>
+</li>
+<li><p>基本结构</p>
+<p>运算器，控制器</p>
+</li>
+</ul>
+<h3 id="2-指令执行过程"><a href="#2-指令执行过程" class="headerlink" title="2. 指令执行过程"></a>2. 指令执行过程</h3><ul>
+<li><p>指令周期</p>
+</li>
+<li><p>指令周期的数据流</p>
+<p>取指周期，间址周期，执行周期，中断周期</p>
+</li>
+<li><p>指令执行方案</p>
+<p>单指令周期，多指令周期，流水线方案</p>
+</li>
+</ul>
+<h3 id="3-数据通路的功能和基本结构"><a href="#3-数据通路的功能和基本结构" class="headerlink" title="3. 数据通路的功能和基本结构"></a>3. 数据通路的功能和基本结构</h3><ul>
+<li>功能</li>
+<li>数据通路的基本结构<ul>
+<li>CPU内部单总线方式</li>
+<li>CPU内部三总线方式</li>
+<li>专用数据通路方式</li>
+</ul>
+</li>
+<li>Others<ul>
+<li>寄存器之间的数据传送</li>
+<li>主存与CPU之间的数据传送</li>
+<li>执行算术或逻辑运算</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-控制器的功能和工作原理"><a href="#4-控制器的功能和工作原理" class="headerlink" title="4. 控制器的功能和工作原理"></a>4. 控制器的功能和工作原理</h3><ul>
+<li>结构和功能</li>
+<li>硬布线控制器<ul>
+<li>硬布线控制单元图</li>
+<li>硬布线控制器的时序系统及微操作</li>
+<li>CPU的控制方式</li>
+<li>硬布线控制单元设计步骤</li>
+</ul>
+</li>
+<li>微程序控制器<ul>
+<li>基本概念</li>
+<li>组成和工作过程</li>
+<li>微指令的编码方式</li>
+<li>微指令的地址形成方式</li>
+<li>微指令的格式</li>
+<li>微程序控制单元的设计步骤</li>
+<li>动态微程序设计和毫微程序设计</li>
+<li>硬布线和微程序控制器的特点</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-指令流水线"><a href="#5-指令流水线" class="headerlink" title="5. 指令流水线"></a>5. 指令流水线</h3><ul>
+<li>基本概念<ul>
+<li>指令流水的定义</li>
+<li>流水线的表示方法</li>
+<li>流水线方式的特点</li>
+</ul>
+</li>
+<li>流水线的分类<ul>
+<li>部件功能级，处理机级和处理机间级流水线</li>
+<li>单功能流水线和多功能流水线</li>
+<li>动态流水线和静态流水线</li>
+<li>线性流水线和非线性流水线</li>
+</ul>
+</li>
+<li>影响流水线的因素<ul>
+<li>结构相关（资源冲突）</li>
+<li>数据相关（数据冲突）</li>
+<li>控制相关（控制冲突）</li>
+</ul>
+</li>
+<li>流水线的性能指标<ul>
+<li>流水线的吞吐率</li>
+<li>流水线的加速比</li>
+<li>流水线的效率</li>
+</ul>
+</li>
+<li>超标量流水线的基本概念<ul>
+<li>超标量流水线技术</li>
+<li>超流水线技术</li>
+<li>超长指令字</li>
+</ul>
+</li>
+</ul>
+<h2 id="六、总线-1"><a href="#六、总线-1" class="headerlink" title="六、总线"></a>六、总线</h2><h3 id="1-总线概述"><a href="#1-总线概述" class="headerlink" title="1. 总线概述"></a>1. 总线概述</h3><ul>
+<li><p>基本概念</p>
+<ul>
+<li><p>定义</p>
+</li>
+<li><p>分类</p>
+</li>
+<li><p>结构</p>
+<p>单总线，双总线，三总线</p>
+</li>
+<li><p>性能指标</p>
+<p>1.总线的传输周期，2.总线时钟周期，3.总线的工作频率， 4.总线的时钟频率， 5.总线宽度，6.总线带宽，7.总线复用，8.信号线数</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-总线仲裁"><a href="#2-总线仲裁" class="headerlink" title="2. 总线仲裁"></a>2. 总线仲裁</h3><ul>
+<li>集中仲裁方式<ul>
+<li>链式查询方式</li>
+<li>计数器定时查询方式</li>
+<li>独立请求方式</li>
+</ul>
+</li>
+<li>分布仲裁方式</li>
+</ul>
+<h3 id="3-总线操作和定时"><a href="#3-总线操作和定时" class="headerlink" title="3. 总线操作和定时"></a>3. 总线操作和定时</h3><ul>
+<li><p>总线传输的4个阶段</p>
+<p>申请分配阶段，寻址阶段，传输阶段，结束阶段</p>
+</li>
+<li><p>同步定时方式</p>
+</li>
+<li><p>异步定时方式</p>
+</li>
+</ul>
+<h3 id="4-总线标准"><a href="#4-总线标准" class="headerlink" title="4. 总线标准"></a>4. 总线标准</h3><ul>
+<li>常见的总线标准</li>
+</ul>
+<h2 id="七、输入-输出系统"><a href="#七、输入-输出系统" class="headerlink" title="七、输入/输出系统"></a>七、输入/输出系统</h2><h3 id="1-I-O系统基本概念"><a href="#1-I-O系统基本概念" class="headerlink" title="1. I/O系统基本概念"></a>1. I/O系统基本概念</h3><ul>
+<li>输入/输出系统<ul>
+<li>1.外部设备 2.接口 3.输入设备 4.输出设备 5.外存设备</li>
+<li>I/O软件，I/O硬件</li>
+</ul>
+</li>
+<li>I/O控制方式<ul>
+<li>程序查询方式</li>
+<li>程序中断方式</li>
+<li>DMA方式</li>
+<li>通道方式</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-外部设备"><a href="#2-外部设备" class="headerlink" title="2. 外部设备"></a>2. 外部设备</h3><ul>
+<li><p>输入设备</p>
+<p>键盘，鼠标</p>
+</li>
+<li><p>输出设备</p>
+<p>显示器，打印机</p>
+</li>
+<li><p>外存储器</p>
+<p>磁盘存储器，磁盘阵列，光盘存储器，固态硬盘</p>
+</li>
+</ul>
+<h3 id="3-I-O接口"><a href="#3-I-O接口" class="headerlink" title="3. I/O接口"></a>3. I/O接口</h3><ul>
+<li>功能</li>
+<li>基本结构</li>
+<li>类型</li>
+<li>端口及其编址</li>
+</ul>
+<h3 id="4-I-O方式"><a href="#4-I-O方式" class="headerlink" title="4. I/O方式"></a>4. I/O方式</h3><ul>
+<li>程序查询方式</li>
+<li>程序中断方式<ul>
+<li>中断的基本概念</li>
+<li>程序中断方式工作流程</li>
+<li>多重中断和中断屏蔽技术</li>
+</ul>
+</li>
+<li>DMA方式<ul>
+<li>DMA方式的特点</li>
+<li>DMA控制器的组成</li>
+<li>DMA的传送方式</li>
+<li>DMA的传送过程</li>
+<li>DMA方式和中断方式的区别</li>
+</ul>
+</li>
+</ul>
+<h1 id="Computer-Operating-System"><a href="#Computer-Operating-System" class="headerlink" title="Computer Operating System"></a>Computer Operating System</h1><h2 id="大纲-2"><a href="#大纲-2" class="headerlink" title="大纲"></a>大纲</h2><h3 id="考查目标-2"><a href="#考查目标-2" class="headerlink" title="[考查目标]"></a>[考查目标]</h3><p>1。掌握操作系统的基本概念、基本原理和基本功能，理解操作系统的整体运行过程。<br>2。掌握操作系统进程、内存、文件和 I/O 管理的策略、算法、机制以及相互关系。<br>3。能够运用所学的操作系统原理、方法与技术分析问题和解决问题，并能利用 C 语言<br>描述相关算法。</p>
 <h3 id="一、操作系统概述"><a href="#一、操作系统概述" class="headerlink" title="一、操作系统概述"></a>一、操作系统概述</h3><p>（一）操作系统的概念、特征、功能和提供的服务<br>（二）操作系统的发展与分类<br>（三）操作系统的运行环境<br>1。内核态与用户态<br>2。中断、异常<br>3。系统调用<br>（四）操作系统体系结构</p>
 <h3 id="二、进程管理"><a href="#二、进程管理" class="headerlink" title="二、进程管理"></a>二、进程管理</h3><p>（一）进程与线程<br>1。进程概念<br>2。进程的状态与转换<br>3。进程控制<br>4。进程组织<br>5。进程通信<br>共享存储系统；消息传递系统；管道通信。<br>6。线程概念与多线程模型<br>（二）处理机调度<br>1。调度的基本概念<br>2。调度时机、切换与过程<br>3。调度的基本准则<br>4。调度方式<br>5。典型调度算法<br>先来先服务调度算法；短作业（短进程、短线程）优先调度算法；时间片轮转调度算法；<br>优先级调度算法；高响应比优先调度算法；多级反馈队列调度算法。<br>（三）同步与互斥<br>1。进程同步的基本概念<br>2。实现临界区互斥的基本方法<br>软件实现方法；硬件实现方法。<br>3。信号量<br>4。管程<br>5。经典同步问题<br>生产者-消费者问题；读者-写者问题；哲学家进餐问题。<br>（四）死锁<br>1。死锁的概念<br>2。死锁处理策略<br>3。死锁预防<br>4。死锁避免<br>系统安全状态，银行家算法。<br>5。死锁检测和解除</p>
 <h3 id="三、内存管理"><a href="#三、内存管理" class="headerlink" title="三、内存管理"></a>三、内存管理</h3><p>（一）内存管理基础<br>1。内存管理概念<br>程序装入与链接；逻辑地址与物理地址空间；内存保护。<br>2。交换与覆盖<br>3。连续分配管理方式<br>4。非连续分配管理方式<br>分页管理方式；分段管理方式；段页式管理方式。<br>（二）虚拟内存管理<br>1。虚拟内存基本概念<br>2。请求分页管理方式<br>3。页面置换算法<br>最佳置换算法（OPT）；先进先出置换算法（FIFO）；最近最少使用置换算法（LRU）；<br>时钟置换算法（CLOCK）。<br>4。页面分配策略<br>5。工作集<br>6。抖动</p>
