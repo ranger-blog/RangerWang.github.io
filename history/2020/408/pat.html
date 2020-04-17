@@ -1627,19 +1627,44 @@ void AdjustDown(ElemType A[], int k, int len) {
 </ul>
 <h2 id="三、存储系统"><a href="#三、存储系统" class="headerlink" title="三、存储系统"></a>三、存储系统</h2><h3 id="1-存储器的层次结构"><a href="#1-存储器的层次结构" class="headerlink" title="1. 存储器的层次结构"></a>1. 存储器的层次结构</h3><ul>
 <li><p>分类</p>
-<p>作用 介质 存取方式 可保存性</p>
+<ul>
+<li><p>作用</p>
+<p>主存储器（主存，内存）、辅助存储器（外存）、高速缓冲存储器（Cache）</p>
+</li>
+<li><p>介质 </p>
+<p>磁表面存储器（磁盘，磁带）、磁心存储器半导体存储器（MOS行存储器，双极行存储器）和光存储器（光盘）</p>
+</li>
+<li><p>存取方式 </p>
+<p>随机存储器（RAM）、只读存储器（ROM）、串行访问存储器</p>
+</li>
+<li><p>可保存性</p>
+<p>易失存储器，非易失存储器</p>
+</li>
+</ul>
 </li>
 <li><p>性能指标</p>
-<p>存储容量 | 单位成本 | 存储速度</p>
+<p>存储容量 | 单位成本 | </p>
+<ul>
+<li><p>存储速度</p>
+<p>数据传输率 = 数据的宽度 / 存储周期</p>
+<p>存取时间$T_a$，存取周期$T_m$，主存带宽$B_m$(又称数据传输率)</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0017.png" alt="image-20200416091740042"></p>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="2-存储器的层次化结构"><a href="#2-存储器的层次化结构" class="headerlink" title="2. 存储器的层次化结构"></a>2. 存储器的层次化结构</h3><p>（磁带，光盘）—&gt; 磁盘—&gt; 主存—&gt; Cache—&gt; 寄存器 </p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0018.png" alt="image-20200416091808654"></p>
 <h3 id="3-半导体随机存储器"><a href="#3-半导体随机存储器" class="headerlink" title="3. 半导体随机存储器"></a>3. 半导体随机存储器</h3><ul>
 <li><p>半导体存储芯片</p>
 <ul>
-<li>基本结构：存储矩阵，译码驱动，读写电路，读/写控制线，片选线，地址线，数据线</li>
-<li>74138译码器</li>
-<li>tips<ul>
+<li><p>基本结构：存储矩阵，译码驱动，读写电路，读/写控制线，片选线，地址线，数据线</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0013.png" alt="image-20200416090923861"></p>
+</li>
+<li><p>74138译码器</p>
+</li>
+<li><p>tips</p>
+<ul>
 <li>地址线和数据线共同反应存储芯片容量大小，如地址线10根，数据线8根，则芯片容量=$2^{10}*8$</li>
 </ul>
 </li>
@@ -1647,13 +1672,35 @@ void AdjustDown(ElemType A[], int k, int len) {
 </li>
 <li><p>SRAM和DRAM</p>
 <ul>
-<li>SRAM，DRAM工作原理</li>
-<li>RAM的读 写周期<ul>
-<li>写周期不明确</li>
+<li><p>SRAM工作原理</p>
+</li>
+<li><p>DRAM工作原理</p>
+<p>DRAM电容上的电荷只能维持1~2 ms</p>
+<ul>
+<li><p>集中刷新，</p>
+<p>读写操作时，不受刷新影响，因此系统的存取速度较高；缺点是在集中刷新期间（死区）不能访问存储器。</p>
+</li>
+<li><p>分散刷新</p>
+<p>优点是没有死区；缺点是加长了系统的存取周期，降低了整机的速度</p>
+</li>
+<li><p>异步刷新</p>
+<p>前两种的结合。避免是CPU连续等待过长的时间，而且减少了刷新次数，从根本上提高了整机的工作效率</p>
+</li>
 </ul>
 </li>
-<li>SRAM 和 DRAM 的比较</li>
-<li>tips<ul>
+<li><p>RAM的读 写周期</p>
+<ul>
+<li><p>写周期不明确</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0014.png" alt="image-20200416091007324"></p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0015.png" alt="image-20200416091027604"></p>
+</li>
+</ul>
+</li>
+<li><p>SRAM 和 DRAM 的比较.</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0016.png" alt="image-20200416091047962"></p>
+</li>
+<li><p>tips</p>
+<ul>
 <li>地址码相同的多个存储元构成一个存储单元</li>
 </ul>
 </li>
@@ -1662,9 +1709,13 @@ void AdjustDown(ElemType A[], int k, int len) {
 <li><p>只读存储器</p>
 <ul>
 <li><p>ROM的特点，</p>
+<ul>
+<li>结构简单，所以位密度比可读写存储器的高</li>
+<li>具有非易失性，可靠性高</li>
+</ul>
 </li>
 <li><p>类型</p>
-<p>掩膜式只读存储器MROM，一次可编程只读存储器PROM，可擦除可编程只读存储器EPROM，闪速存储器Flash Memory，固态硬盘Solid State Drivers.</p>
+<p>掩膜式只读存储器MROM，一次可编程只读存储器PROM，可擦除可编程只读存储器EPROM(编程次数有限)，闪速存储器Flash Memory，固态硬盘Solid State Drivers.</p>
 </li>
 </ul>
 </li>
@@ -1672,55 +1723,191 @@ void AdjustDown(ElemType A[], int k, int len) {
 <h3 id="4-主存储器与CPU的连接"><a href="#4-主存储器与CPU的连接" class="headerlink" title="4. 主存储器与CPU的连接"></a>4. 主存储器与CPU的连接</h3><ul>
 <li><p>连接原理</p>
 <p>数据总线，地址总线，控制总线</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0019.png" alt="image-20200416092151976"></p>
 </li>
 <li><p>主存容量的扩展</p>
 <ul>
-<li>位扩展法</li>
-<li>字扩展法</li>
-<li>字位同时扩展法</li>
+<li><p>位扩展法</p>
+<ul>
+<li><p>连接方式，是将多个存储芯片的地址端、片选端和读写控制端相应并联，数据短分别引出。</p>
+</li>
+<li><p>仅采用位扩展时，各芯片连接地址线的方式相同，但连接数据线的方式不同，在某一时刻选中所有的芯片，所以片选信号$\overline{CS}$要连接到所有芯片</p>
+</li>
+<li><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0020.png" alt="image-20200416093543997"></li>
+</ul>
+</li>
+<li><p>字扩展法</p>
+<ul>
+<li>字扩展将芯片的地址线、数据线、读写控制线相应并联，而由片选信号来区分给芯片的地址范围。</li>
+<li>仅采用字扩展时，各芯片连接地址线的方式相同，连接数据线的方式也相同，但在某一时刻只需选中部门芯片，所以通过片选信号$\overline{CS}$或采用译码器设计连接到相应的芯片</li>
+<li><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0021.png" alt="image-20200416093600555"></li>
+</ul>
+</li>
+<li><p>字位同时扩展法</p>
+<ul>
+<li>采用字位同时扩展时，各芯片连接地址线的方式相同，但连接数据线的方式不同，而且需要通过片选信号$\overline{CS}$或采用译码器设计连接到相应的芯片。</li>
+<li><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0022.png" alt="image-20200416093630896"></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>存储芯片的地址分配和片选</p>
+<p>CPU对存储单元进行访问，首先要选择存储芯片（片选），然后为选中的芯片依地址码选择相应的存储单元，以进行数据的存取（字选）。片内的字选通常是由CPU送出的 N 条低位地址线完成的，地址线直接接到所有存储芯片的地址输入端（N由片内存储容量$2^N$决定）</p>
 <ul>
-<li>线选法</li>
-<li>译码片选法</li>
+<li><p>线选法</p>
+<p>优：不需要地址译码器，线路简单；缺：地址空间不连续，选片的地址线必须分时为低电平（否则不能工作），不能充分利用系统的存储器空间，造成地址资源的浪费</p>
+</li>
+<li><p>译码片选法</p>
+<p>用除片内寻址外的高位地址线通过地址译码器芯片产生片选信号。</p>
+</li>
 </ul>
 </li>
 <li><p>存储器与CPU的连接</p>
 <ul>
-<li>合理选择存储芯片</li>
-<li>地址线，数据线，读/写命令线，片选线等的连接</li>
+<li><p>合理选择存储芯片</p>
+</li>
+<li><p>地址线的连接</p>
+<ul>
+<li>CPU的地址线数往往比存储芯片的地址线数要多</li>
+<li>通常将CPU地址线的低位与存储芯片的地址线相连，以选择芯片中的某一单元（字选），这部分的译码是由芯片的片内逻辑完成的。</li>
+<li>而CPU地址线的高位则在扩充存储芯片时使用，用来选择存储芯片（片选），这部分译码由外接译码器逻辑完成</li>
+</ul>
+</li>
+<li><p>数据线的连接</p>
+<p>CPU的数据线数与存储芯片的数据线数不一定相等，在相等时可直接相连；在不相等时必须对存储芯片扩位，使两者相等</p>
+</li>
+<li><p>读/写命令线的连接</p>
+</li>
+<li><p>片选线的连接</p>
+<p>片选线的连接是CPU与存储芯片连接的关键。存储器有许多存储芯片叠加而成，哪一片被选中完全取决于该存储芯片的片选控制端$\overline{CS}$是否能接收到来自CPU的片选有效信号。</p>
+<p>片选信号与CPU的访存控制信号$\overline{MREQ}$(低电平有效)有关</p>
+</li>
 </ul>
 </li>
 </ul>
-<h3 id="5-双端口RAM和多模块存储器"><a href="#5-双端口RAM和多模块存储器" class="headerlink" title="5. 双端口RAM和多模块存储器"></a>5. 双端口RAM和多模块存储器</h3><ul>
-<li>双端口RAM</li>
-<li>多模块存储器<ul>
-<li>单体多字存储器</li>
-<li>多体并行存储器</li>
+<h3 id="5-双端口RAM和多模块存储器"><a href="#5-双端口RAM和多模块存储器" class="headerlink" title="5. 双端口RAM和多模块存储器"></a>5. 双端口RAM和多模块存储器</h3><p>为了提高CPU访存速度，可采用双端口存储器、多模块存储器等技术，它们同属并行技术，前者为空间并行，后者为时间并行。</p>
+<ul>
+<li><p>双端口RAM</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0023.png" alt="image-20200416110501870"></p>
+</li>
+<li><p>多模块存储器</p>
+<ul>
+<li><p>单体多字存储器</p>
+<ul>
+<li>优：增大了存储器的宽度，提高了单体存储器的工作速度</li>
+<li>缺：指令和数据在主存内必须是连续存放的，一旦遇到转移指令，或操作数不能连续存放，这种方法的效果就不明显</li>
+<li><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0024.png" alt="image-20200416111348145"></li>
+</ul>
+</li>
+<li><p>多体并行存储器</p>
+<ul>
+<li><p>高位交叉编址（顺序方式），高位地址表示体号，低位地址为体内地址</p>
+</li>
+<li><p>低位交叉编址（交叉方式），低位地址为体号，高位地址为体内地址</p>
+</li>
+<li><p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0025.png" alt="image-20200416111429989"></p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0026.png" alt="image-20200416111529976"></p>
+</li>
 </ul>
 </li>
 </ul>
-<h3 id="6-高速缓冲存储器"><a href="#6-高速缓冲存储器" class="headerlink" title="6. 高速缓冲存储器"></a>6. 高速缓冲存储器</h3><ul>
-<li><p>程序访问的局部性原理</p>
 </li>
-<li><p>Cache的基本工作原理</p>
+</ul>
+<h3 id="6-高速缓冲存储器"><a href="#6-高速缓冲存储器" class="headerlink" title="6. 高速缓冲存储器"></a>6. 高速缓冲存储器</h3><p>因为单纯依靠并行主存系统提高主存系统的频宽是有限的，所以 <strong>Cache</strong> 闪亮登场.</p>
+<ul>
+<li><p>程序访问的局部性原理，包括时间局部性和空间局部性</p>
+<p>高速缓冲技术就是利用程序访问的局部性原理。</p>
+</li>
+<li><p>Cache的基本工作原理，cache常由SRAM构成</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0027.png" alt="image-20200416112311148"></p>
+<ul>
+<li>CPU与Cache之间的数据交换以字位单位，而Cache与主存之间的数据交换以Cache块进行。</li>
+<li>Cache写策略处理，全写法和写回法</li>
+<li>Cache的命中率，$H=N_c / (N_c+N_m)$</li>
+<li>Cache-主存系统的平均访问时间 $T_a=Ht_c + (1-H)t_m$</li>
+</ul>
 </li>
 <li><p>Cache和主存的映射方式</p>
-<p>直接，全相联，组相联  映射</p>
+<p>在Cache中，地址映射是指把主存地址空间映射到Cache地址空间，即把存放在主存中的程序按照某种规则装入Cache。</p>
+<p><strong>地址映射</strong>不同于<strong>地址变换</strong>，地址变换是指CPU在访存时，将主存地址按映射规则换算成Cache地址的过程。</p>
+<ul>
+<li><p>直接映射，实现简单，但不够灵活，块冲突概率最高，空间利用率最低</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0028.png" alt="image-20200416131530914"></p>
 </li>
-<li><p>Cache中主存块的替换算法</p>
+<li><p>全相联映射，比较灵活，Cache块的冲突概率低，空间利用率高，命中率也高；缺点：地址变换速度慢，实现成本高，通常采用昂贵的按内容寻址的相连存储器进行地址映射。</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0029.png" alt="image-20200416132117635"></p>
 </li>
-<li><p>Cache写策略</p>
+<li><p>组相联映射</p>
+<p>组间采取直接映射，组内采取全相连映射</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0030.png" alt="image-20200416132300835"></p>
 </li>
 </ul>
-<h3 id="7-虚拟存储器"><a href="#7-虚拟存储器" class="headerlink" title="7. 虚拟存储器"></a>7. 虚拟存储器</h3><ul>
-<li>基本概念</li>
-<li>页式虚拟存储器</li>
-<li>段式虚拟存储器</li>
-<li>段页式虚拟存储器</li>
-<li>块表（TLB）</li>
-<li>虚拟存储器与Cache的比较</li>
+</li>
+<li><p>Cache中主存块的替换算法</p>
+<ul>
+<li><p>随机算法（RAND）</p>
+<p>实现比较简单，但未依据程序访问的局部性原理，故可能命中率较低.</p>
+</li>
+<li><p>先进先出算法（FIFO）</p>
+<p>容易实现，但也未依据程序访问的局部性原理，可能会把常用的程序块作为最早进入Cache的块替换掉。</p>
+</li>
+<li><p>近期最少使用算法（LRU）</p>
+<p>依据程序访问的局部性原理选择近期内长久未访问过的存储行作为替换的行，平均命中率要比FIFO的高，是堆栈类算法。</p>
+<p>LRU对每行设置一个计数器，Cache每命中一次，命中行计数清 0，其它行计数器均加 1。计数值最大的行换出。</p>
+</li>
+<li><p>最不经常使用算法（LFU）</p>
+<p>将一段时间内被访问次数最少的存储行换出，每行也设置一个计数器，新行初始为0，每访问一次，被访问行计数器加 1，计数值最小的行换出</p>
+</li>
+</ul>
+</li>
+<li><p>Cache写策略，对于Cache写命中 （write hit）</p>
+<ul>
+<li><p>全写法（写直通法，write-through）</p>
+<p>实现简单，随时保持主存数据的正确性。缺点：增加了访存次数，降低了Cache的效率。</p>
+<p>写缓冲（Write Buffer）:减少全写法直接写入主存的时间消耗，是一个FIFO队列</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0031.png" alt="image-20200416134615194"></p>
+</li>
+<li><p>写回法（write-back）</p>
+<p>当CPU对Cache写命中时，只修改Cache的内容，而不立即写入主存，只有当此块被换出时才写回主存。</p>
+<p>减少了访存次数，但存在不一致的隐患，</p>
+<p>每个Cache行必须设置一个标志位（脏位），以反映此块是否被CPU修改过。</p>
+</li>
+</ul>
+<p>写不命中</p>
+<ul>
+<li><p>写分配法（write-allocate）</p>
+<p>加载主存中的块到Cache中，然后更新这个Cache块，它试图利用程序的空间局部性，但缺点是每次不命中都需要从主存中读取一块</p>
+</li>
+<li><p>非写分配法（not-write-allocate）</p>
+<p>只写入主存，不进行调块</p>
+</li>
+<li><p>多级Cache</p>
+<p>通常为 3 级，离CPU越远，访问速度越慢，容量越大。指令Cache与数据Cache分离一般在L1级，此时通常为写分配法与写回法合用。</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0032.png" alt="image-20200416135521197"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-虚拟存储器"><a href="#7-虚拟存储器" class="headerlink" title="7. 虚拟存储器"></a>7. 虚拟存储器</h3><p>虚拟存储器具有主存的速度和辅存的容量，提高了存储系统的性价比。</p>
+<ul>
+<li><p>基本概念</p>
+<ul>
+<li><p>用于编程允许设计的地址称为 虚地址或逻辑地址，虚地址对应的存储空间或程序空间；实际的主存单元地址称为实地址或物理地址，实地址对应的是主存地址空间，也成实地址空间。虚地址要比实地址大很多。</p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0033.png" alt="image-20200416140637976"></p>
+<p><img src="D:\project\myblog\blog\source\_posts\history\2020\408\pat\cc0034.png" alt="image-20200416140953719"></p>
+</li>
+</ul>
+</li>
+<li><p>页式虚拟存储器</p>
+</li>
+<li><p>段式虚拟存储器</p>
+</li>
+<li><p>段页式虚拟存储器</p>
+</li>
+<li><p>块表（TLB）</p>
+</li>
+<li><p>虚拟存储器与Cache的比较</p>
+</li>
 </ul>
 <h3 id="8-tips"><a href="#8-tips" class="headerlink" title="8. tips"></a>8. tips</h3><ul>
 <li><p>相联存储器既可以按地址寻址，又可以按内容寻址，又称按内容寻址的存储器。</p>
